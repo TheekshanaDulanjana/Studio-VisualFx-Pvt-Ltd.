@@ -1,41 +1,86 @@
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import FAQ from "./Pages/Faq";
+import Contact from "./Pages/Contact";
+import FilmGallery from "./Pages/FilmGallery";
+import Production from "./Pages/Production";
+import Testimonials from "./Pages/Testimonials";
+import NotFound from "./Pages/NotFound";
+
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+
+import ScrollToTop from "./Components/ScrollToTop";
+import LoadingSpinner from "./Components/LoadingSpinner";
+import WhatsappButton from "./Components/WhatsappButton";
+
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div
-      className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white"
-      style={{
-        fontFamily: "Poppins, sans-serif",
-        letterSpacing: "0.5px",
-      }}
-    >
-      <h1
-        className="text-5xl font-bold drop-shadow-lg"
-        style={{
-          textShadow: "0 4px 15px rgba(0,0,0,0.3)",
-        }}
-      >
-        Hello World 👋
-      </h1>
-
-      <p
-        className="mt-4 text-lg opacity-90"
-        style={{
-          border: "2px solid white",
-          padding: "10px 18px",
-          borderRadius: "12px",
-          backdropFilter: "blur(6px)",
-        }}
-      >
-        Welcome to React + Vite + Tailwind!
-      </p>
-
-      <button
-        className="mt-6 px-6 py-3 bg-white text-red-700 font-semibold rounded-xl hover:scale-105 hover:shadow-xl transition-all"
-        style={{
-          boxShadow: "0 5px 20px rgba(255,255,255,0.3)",
-        }}
-      >
-        Click Me 🚀
-      </button>
-    </div>
+    <BrowserRouter>
+      {loading ? <LoadingSpinner /> : <MainApp />}
+    </BrowserRouter>
   );
 }
+
+const MainApp = () => {
+  const location = useLocation();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const startTimer = setTimeout(() => {
+      setLoading(true);
+
+      const endTimer = setTimeout(() => {
+        setLoading(false);
+      }, 500);
+
+      return () => clearTimeout(endTimer);
+    }, 0);
+
+    return () => clearTimeout(startTimer);
+  }, [location.pathname]);
+
+  if (loading) return <LoadingSpinner />;
+
+  return (
+    <>
+      <Header />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <section id="home"> <Home /> </section>
+              <section id="testimonials"> <Testimonials /></section>
+              <section id="faq"> <FAQ /> </section>
+              <section id="contact"> <Contact /> </section>
+            </>
+          }
+        />
+
+        <Route path="/about" element={<About />} />
+        <Route path="/film-gallery" element={<FilmGallery />} />
+        <Route path="/production" element={<Production />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
+      <ScrollToTop />
+      <WhatsappButton />
+      <Footer />
+    </>
+  );
+};
