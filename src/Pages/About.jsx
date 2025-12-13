@@ -61,9 +61,8 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            Every frame tells a story beyond words! Dive into timeless moments captured with passion and artistry!
-            Let your heart wander through memories frozen in light!
-          </motion.p>
+            Will Update <br />
+            Details          </motion.p>
         </div>
       </div>
     </div>

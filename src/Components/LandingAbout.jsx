@@ -73,7 +73,7 @@ export default function LandingAbout() {
       <div className="mt-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          {/* Video Cards */}
+          {/* Video Card */}
           <div className="rounded-2xl overflow-hidden shadow-lg bg-black hover:scale-[1.02] transition-transform duration-300">
             <iframe
               className="w-full h-56"
