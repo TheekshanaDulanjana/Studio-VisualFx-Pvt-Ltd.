@@ -1,1 +1,34 @@
 @import "tailwindcss";
+
+@layer base {
+  .font-alata {
+  font-family: 'Alata', sans-serif;
+}
+
+.font-alatsi {
+  font-family: 'Alatsi', sans-serif;
+}
+
+
+  body, html {
+    overflow-x: hidden;
+    background-color: #000000;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #151515;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000000 ;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff ;
+    opacity: 0.8;
+  }
+}
