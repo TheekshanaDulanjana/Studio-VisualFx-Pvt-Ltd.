@@ -6,7 +6,7 @@ import About from "./Pages/About";
 import FAQ from "./Pages/Faq";
 import Contact from "./Pages/Contact";
 import FilmGallery from "./Pages/FilmGallery";
-import Production from "./Pages/Production";
+import Commercial from "./Pages/Commercial";
 import Testimonials from "./Pages/Testimonials";
 import NotFound from "./Pages/NotFound";
 
@@ -74,7 +74,7 @@ const MainApp = () => {
 
         <Route path="/about" element={<About />} />
         <Route path="/film-gallery" element={<FilmGallery />} />
-        <Route path="/production" element={<Production />} />
+        <Route path="/commercial" element={<Commercial />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

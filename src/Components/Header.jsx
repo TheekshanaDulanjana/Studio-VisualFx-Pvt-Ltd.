@@ -104,13 +104,13 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <button
-            onClick={() => navigate("/production")}
+            onClick={() => navigate("/commercial")}
             className="group hidden lg:flex items-center gap-3 bg-white 
                        font-alata text-black px-4 py-2 rounded-full 
                        hover:bg-black hover:text-white 
                        transition-all duration-200 text-sm xl:text-base  cursor-pointer"
           >
-            <span>Productions</span>
+            <span>Commercial</span>
             <span className="flex items-center justify-center w-6 h-6 bg-black rounded-full group-hover:bg-white transition">
               <FaArrowRight className="text-white text-xs group-hover:text-black transition" />
             </span>
@@ -169,13 +169,13 @@ const Header = () => {
           {/* CTA */}
           <div className="mb-6 items-center justify-center flex">
             <button
-              onClick={() => navigate("/production")}
+              onClick={() => navigate("/commercial")}
               className="w-48 h-14 flex items-center justify-center gap-4 
                          bg-white text-black font-alata 
                          px-6 py-4 rounded-full 
                          hover:bg-white transition-all duration-300"
             >
-              <span className="text-lg">Productions</span>
+              <span className="text-lg">Commercial</span>
               <span className="flex items-center justify-center w-8 h-8 bg-black rounded-full">
                 <FaArrowRight className="text-white text-sm" />
               </span>
