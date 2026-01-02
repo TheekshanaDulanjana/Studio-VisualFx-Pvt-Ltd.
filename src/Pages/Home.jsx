@@ -81,7 +81,7 @@ const Home = () => {
 
           {/* Subtext */}
           <motion.p
-            className="text-white font-alata text-sm sm:text-lg md:text-xl mt-4"
+            className="text-white font-[Alata] text-sm sm:text-lg md:text-xl mt-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
@@ -102,14 +102,14 @@ const Home = () => {
           >
             <button
               onClick={() => navigate("/film-gallery")}
-              className="w-40 h-10 bg-white text-black font-semibold rounded-full hover:bg-black cursor-pointer hover:text-white transition"
+              className="w-40 h-10 bg-white text-black font-[Alata] rounded-full hover:bg-black cursor-pointer hover:text-white transition"
             >
               View Portfolio
             </button>
 
             <button
               onClick={scrollToContact}
-              className="w-40 h-10 border border-white text-white font-semibold rounded-full hover:bg-white cursor-pointer hover:text-black transition"
+              className="w-40 h-10 border border-white text-white font-[Alata] rounded-full hover:bg-white cursor-pointer hover:text-black transition"
             >
               Book Your Session
             </button>

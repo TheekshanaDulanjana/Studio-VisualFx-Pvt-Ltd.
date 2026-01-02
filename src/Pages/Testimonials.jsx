@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import TestimonialCard from "../Components/TestimonialCard";
 
 import testimonials01 from "../assets/testimonials01.jpg";
 import testimonials02 from "../assets/testimonials02.jpg";
@@ -6,169 +7,121 @@ import testimonials03 from "../assets/testimonials03.jpg";
 import testimonials04 from "../assets/testimonials04.jpg";
 import testimonials05 from "../assets/testimonials05.jpg";
 
-// Testimonials data
 const testimonials = [
-  {
-    username: "Kavi and Navod",
-    image: testimonials01,
-    eventType: "Wedding",
-    message:
-      "Working with this team has been a game-changer for our business. They understood our needs and delivered solutions that exceeded expectations. Their professionalism, creativity, and dedication made the process smooth and stress-free. I highly recommend their services to anyone looking for a reliable and innovative partner.",
-    date: "18 September 2025",
-  },
-  {
-    username: "Saman and Nadeesha",
-    image: testimonials02,
-    eventType: "Engagement",
-    message:
-      "Amazing team! They captured every moment beautifully and made us feel so comfortable. Highly professional and creative!",
-    date: "10 August 2025",
-  },
-  {
-    username: "Ruwan and Anjali",
-    image: testimonials03,
-    eventType: "Wedding",
-    message:
-      "Their cinematic vision is outstanding. Every shot was perfect, and the final product was beyond our expectations.",
-    date: "5 July 2025",
-  },
-  {
-    username: "Nimali and Roshan",
-    image: testimonials04,
-    eventType: "Engagement",
-    message: "Beautifully executed and highly professional team!",
-    date: "20 June 2025",
-  },
-  {
-    username: "Dilani and Kasun",
-    image: testimonials05,
-    eventType: "Wedding",
-    message: "We loved every moment captured by this team!",
-    date: "12 May 2025",
-  },
+  { username: "Kavi and Navod", image: testimonials01, eventType: "Wedding", message: "Working with this team has been a game-changer for our business. They understood our needs and delivered solutions that exceeded expectations.", date: "18 September 2025" },
+  { username: "Saman and Nadeesha", image: testimonials02, eventType: "Engagement", message: "Amazing team! They captured every moment beautifully and made us feel so comfortable.", date: "10 August 2025" },
+  { username: "Ruwan and Anjali", image: testimonials03, eventType: "Wedding", message: "Their cinematic vision is outstanding. Every shot was perfect.", date: "5 July 2025" },
+  { username: "Nimali and Roshan", image: testimonials04, eventType: "Engagement", message: "Beautifully executed and highly professional team!", date: "20 June 2025" },
+  { username: "Dilani and Kasun", image: testimonials05, eventType: "Wedding", message: "We loved every moment captured by this team!", date: "12 May 2025" },
 ];
 
 export default function Testimonials() {
   const sliderRef = useRef(null);
+  const intervalRef = useRef(null);
 
-
-  // Helper to get first 3 testimonials and count remaining
   const firstThree = testimonials.slice(0, 3);
   const remainingCount = testimonials.length - firstThree.length;
 
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+
+  // 🔹 Auto scroll
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    intervalRef.current = setInterval(() => {
+      slider.scrollBy({ left: 320, behavior: "smooth" });
+      if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth - 10) {
+        slider.scrollTo({ left: 0, behavior: "smooth" });
+      }
+    }, 3000);
+
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  // 🔹 Mouse wheel scroll
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    const handleWheel = (e) => {
+      e.preventDefault();
+      slider.scrollBy({ left: e.deltaY > 0 ? 320 : -320, behavior: "smooth" });
+    };
+
+    slider.addEventListener("wheel", handleWheel, { passive: false });
+    return () => slider.removeEventListener("wheel", handleWheel);
+  }, []);
+
+  // 🔹 Touch drag
+  const handleTouchStart = (e) => { setStartX(e.touches[0].clientX); setIsDragging(true); };
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const diff = startX - currentX;
+    if (Math.abs(diff) > 50) {
+      sliderRef.current.scrollBy({ left: diff > 0 ? 320 : -320, behavior: "smooth" });
+      setStartX(currentX);
+    }
+  };
+  const handleTouchEnd = () => setIsDragging(false);
+
   return (
-    <section className="bg-black text-white py-16 px-4">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
-        {/* Left Content */}
-        <div className="flex flex-col justify-center font-alata">
-          {/* Small top section with circles */}
-          <div className="flex items-center mb-4 bg-white rounded-full w-48 pl-3 p-2">
+    <section className="bg-black text-white py-12 sm:py-16 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+        {/* LEFT SIDE */}
+        <div className="lg:w-5/12 flex flex-col justify-center font-[Alata]">
+          <div className="flex items-center mb-4 bg-white rounded-full w-fit px-3 py-2">
             {firstThree.map((t, i) => (
               <img
                 key={i}
                 src={t.image}
                 alt={t.username}
-                className={`w-6 h-6 rounded-full border border-black object-cover ${
-                  i !== 0 ? "-ml-2" : ""
-                }`} // negative margin for overlap except first
+                className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-black object-cover ${i !== 0 ? "-ml-2" : ""}`}
               />
             ))}
             {remainingCount > 0 && (
-              <div className="pl-2 h-6 rounded-full text-black flex items-center justify-center text-sm ">
+              <span className="ml-2 text-sm sm:text-base text-black">
                 +{remainingCount} Testimonials
-              </div>
+              </span>
             )}
           </div>
 
-          {/* Main Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6 font-alatsi">
-            What our clients are <br />
-            saying about us?
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 font-alatsi leading-snug">
+            What our clients are <br /> saying about us?
           </h2>
 
-          <p className="text-gray-300 max-w-xl text-base text-justify sm:text-lg">
-            Hear from the couples and clients whose most precious moments we’ve
-            captured. Their words tell the story of our passion, craft, and
-            cinematic vision. Each testimonial reflects the emotions, trust, and
-            unforgettable experiences that define every frame we create.
+          <p className="text-gray-300 max-w-md text-justify sm:text-lg">
+            Hear from the couples and clients whose most precious moments we’ve captured.
+            Hear from the couples and clients whose most .
+            Hear from the couples and clients whose most precious moments we’ve captured.
           </p>
         </div>
 
-        {/* Right Testimonials Slider */}
-        <div className="relative bg-black">
-          {/* Slider */}
+        {/* RIGHT SIDE – Auto Slider */}
+        <div className="lg:w-7/12 relative">
           <div
             ref={sliderRef}
-            className="flex gap-6 snap-x snap-mandatory overflow-hidden cursor-grab h-90   py-2"
+            onMouseEnter={() => clearInterval(intervalRef.current)}
+            onMouseLeave={() => {
+              intervalRef.current = setInterval(() => sliderRef.current.scrollBy({ left: 320, behavior: "smooth" }), 3000);
+            }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            className="flex gap-4 sm:gap-6 overflow-hidden scroll-smooth snap-x snap-mandatory cursor-grab py-2"
           >
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="group relative  rounded-2xl overflow-hidden shadow-lg h-80 flex-none w-[400px] snap-center"
-              >
-                <img
-                  src={t.image}
-                  alt={t.username}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-
-                {/* 2. Initial View Overlay (Gradient + Name/Avatar) - Disappears on Hover */}
-                <div className="absolute inset-0 bg-linear-to-t from-white/20 via-transparent to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={t.image}
-                      alt={t.username}
-                      className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                    />
-                    <div>
-                      <h3 className="text-black font-alatsi">{t.username}</h3>
-                      <p className="text-black/70 text-xs font-alata ">{t.eventType}</p>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div className="absolute inset-0 bg-white/20 backdrop-blur-md p-6 flex flex-col justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
-                  {/* Header inside hover card */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <img
-                      src={t.image}
-                      alt={t.username}
-                      className="w-12 h-12 rounded-full object-cover border border-white"
-                    />
-                    <div>
-                      <h3 className="font-alatsi text-black">{t.username}</h3>
-                      <p className="text-black/80 font-alata text-sm">{t.eventType}</p>
-                    </div>
-                  </div>
-
-                  {/* Message (Only visible on hover) */}
-                  <p className="text-black/70 text-justify font-alata text-sm leading-relaxed mb-4 line-clamp-5">
-                    "{t.message}"
-                  </p>
-
-                  <p className="text-white font-alata text-xs absolute bottom-4 right-6">
-                    {t.date}
-                  </p>
-                </div>
-              </div>
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} testimonial={testimonial} />
             ))}
           </div>
 
-          {/* Navigation Buttons */}
-          {/* <button
-            onClick={() => scroll("prev")}
-            className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 transition"
-          >
-            &#8592;
-          </button>
-          <button
-            onClick={() => scroll("next")}
-            className="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 transition"
-          >
-            &#8594;
-          </button> */}
+          {/* 🔹 Gradient overlay for right shadow effect on large screens */}
+          <div className="hidden lg:block absolute top-0 right-0 h-full w-34 pointer-events-none bg-linear-to-l from-black/80 to-transparent"></div>
         </div>
+
       </div>
     </section>
   );

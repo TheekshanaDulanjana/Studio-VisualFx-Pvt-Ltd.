@@ -18,12 +18,12 @@ const Commercial = () => {
 
         {/* Content */}
         <div className="relative z-10 w-full max-w-3xl flex flex-col items-start text-left text-white">
-                    <p className="text-lg font-alata sm:text-2xl md:text-3xl">
+                    <p className="text-lg font-[Alata] sm:text-2xl md:text-3xl">
             Commercial Projects
           </p>
           
           
-          <h1 className="text-3xl sm:text-4xl font-alatsi md:text-6xl font-bold leading-tight mt-2">
+          <h1 className="text-3xl sm:text-4xl font-alatsi md:text-6xl  leading-tight mt-2">
             Studio VisualFX (Pvt) Ltd.
           </h1>
 

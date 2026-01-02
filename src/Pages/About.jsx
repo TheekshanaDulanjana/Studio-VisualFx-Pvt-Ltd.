@@ -56,7 +56,7 @@ const About = () => {
             Who We Are?
           </motion.h1>
           <motion.p
-            className="text-md md:text-lg font-alata text-white mt-2 max-w-3xl"
+            className="text-md md:text-lg font-[Alata] text-white mt-2 max-w-3xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}

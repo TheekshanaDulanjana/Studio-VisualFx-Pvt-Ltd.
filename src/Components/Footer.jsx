@@ -46,7 +46,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-white font-alata">
+    <footer className="text-white font-[Alata]">
       <div className="max-w-7xl mx-auto py-4">
         {/* Top Divider */}
         <div className="border-t border-gray-700"></div>

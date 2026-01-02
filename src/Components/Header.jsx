@@ -90,7 +90,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex space-x-8 xl:space-x-10 text-gray-200 font-thin font-alata">
+          <nav className="hidden lg:flex space-x-8 xl:space-x-10 text-gray-200 font-thin font-[Alata]">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -106,7 +106,7 @@ const Header = () => {
           <button
             onClick={() => navigate("/commercial")}
             className="group hidden lg:flex items-center gap-3 bg-white 
-                       font-alata text-black px-4 py-2 rounded-full 
+                       font-[Alata] text-black px-4 py-2 rounded-full 
                        hover:bg-black hover:text-white 
                        transition-all duration-200 text-sm xl:text-base  cursor-pointer"
           >
@@ -156,7 +156,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative group text-2xl font-alata tracking-wide transition-all"
+                className="relative group text-2xl font-[Alata] tracking-wide transition-all"
               >
                 <span className="group-hover:text-[#E29D42] transition">
                   {item.label}
@@ -171,7 +171,7 @@ const Header = () => {
             <button
               onClick={() => navigate("/commercial")}
               className="w-48 h-14 flex items-center justify-center gap-4 
-                         bg-white text-black font-alata 
+                         bg-white text-black font-[Alata] 
                          px-6 py-4 rounded-full 
                          hover:bg-white transition-all duration-300"
             >
