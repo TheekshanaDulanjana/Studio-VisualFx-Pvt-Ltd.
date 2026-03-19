@@ -48,7 +48,7 @@ const About = () => {
         {/* Title and Description */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20 mt-28">
           <motion.h1
-            className="text-4xl md:text-5xl font-alatsi text-white"
+            className="text-4xl md:text-5xl font-belleza text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -56,7 +56,7 @@ const About = () => {
             Who We Are?
           </motion.h1>
           <motion.p
-            className="text-md md:text-lg font-[Alata] text-white mt-2 max-w-3xl"
+            className="text-md md:text-lg font-roboto text-white mt-2 max-w-3xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}

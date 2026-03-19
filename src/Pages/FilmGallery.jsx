@@ -95,9 +95,9 @@ const FilmGallery = () => {
           />
           <div className="absolute top-0 left-0 w-full h-full bg-linear-to-t from-black to-transparent opacity-90 z-10" />
         </motion.div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20 mt-28">
+        <div className="absolute inset-0 flex flex-col items-center font-belleza justify-center text-center px-4 z-20 mt-28">
           <motion.h1
-            className="text-4xl md:text-5xl font-alatsi text-white"
+            className="text-4xl md:text-5xl  text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -105,7 +105,7 @@ const FilmGallery = () => {
             Our Films
           </motion.h1>
           <motion.p
-            className="text-md md:text-lg font-[Alata] text-white mt-2 max-w-3xl"
+            className="text-md md:text-lg font-roboto text-white mt-2 max-w-3xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -127,7 +127,7 @@ const FilmGallery = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
               placeholder="Search your film..."
-              className="w-full font-[Alata] border shadow-xl border-gray-400 hover:border-white px-4 py-2 pr-10 bg-transparent rounded-full text-white backdrop-blur-xs focus:outline-none focus:border-white transition duration-300"
+              className="w-full font-roboto border shadow-xl border-gray-400 hover:border-white px-4 py-2 pr-10 bg-transparent rounded-full text-white backdrop-blur-xs focus:outline-none focus:border-white transition duration-300"
             />
             <button
               onClick={handleSearch}
@@ -166,14 +166,14 @@ const FilmGallery = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="p-4 text-center text-white font-[Alata]">{film.coupleName}</div>
+                  <div className="p-4 text-center font-roboto text-white ">{film.coupleName}</div>
                 </div>
               );
             })}
           </div>
         ) : (
           <div className="text-center text-white mt-24 mb-24">
-            <h2 className="text-3xl font-alatsi mb-2">No results found!</h2>
+            <h2 className="text-3xl mb-2">No results found!</h2>
             <p className="text-lg font-[Alata]">Sorry, we couldn't find anything matching your search!</p>
           </div>
         )}

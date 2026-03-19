@@ -60,7 +60,7 @@ export default function Footer() {
               alt="Finax Logo"
               className="w-28 mb-4 mx-auto md:mx-0"
             />
-            <p className="text-sm leading-relaxed max-w-full md:max-w-sm">
+            <p className="text-sm leading-relaxed font-roboto max-w-full md:max-w-sm">
               We are at the intersection of finance and technology. We empower the
               Fintech community through high-impact events and authoritative content.
             </p>
@@ -87,10 +87,10 @@ export default function Footer() {
 
           {/* Award Categories */}
           <div className="text-center md:text-left">
-            <h3 className="font-alatsi text-white text-lg mb-3">
+            <h3 className=" text-white font-belleza text-lg mb-3">
               Award Categories
             </h3>
-            <ul className="space-y-1 text-sm text-white/70">
+            <ul className="space-y-1 text-sm font-roboto text-white/70">
               {["Traders Award", "Brokers Award", "Support Services"].map(
                 (award, idx) => (
                   <li key={idx}>{award}</li>
@@ -101,10 +101,10 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="text-center md:text-left">
-            <h3 className="font-alatsi text-white text-lg mb-3">
+            <h3 className=" text-white  font-belleza text-lg mb-3">
               Quick Links
             </h3>
-            <ul className="space-y-1 text-sm text-white/70">
+            <ul className="space-y-1 text-sm font-roboto text-white/70">
               {navItems.map((item) => (
                 <li
                   key={item.id}
@@ -119,10 +119,10 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="text-center md:text-left">
-            <h3 className="font-alatsi text-white text-lg mb-3">
+            <h3 className=" text-white font-belleza text-lg mb-3">
               Contact Us
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm font-roboto">
               <li className="flex items-center justify-center md:justify-start gap-2">
                 <FaPhone className="text-white/70" />
                 <a
@@ -147,9 +147,9 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-4">
-          <div className="flex justify-center items-center text-sm text-white/70">
+          <div className="flex justify-center items-center text-sm font-roboto text-white/70">
             <p className="text-center">
-              © {new Date().getFullYear()} Studio VisualFx (Pvt) Ltd. All rights reserved.
+              © {new Date().getFullYear()} Studio VisualFx (Pvt) Ltd. All Rights Reserved.
             </p>
           </div>
         </div>

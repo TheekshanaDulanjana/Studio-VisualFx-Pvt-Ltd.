@@ -23,7 +23,7 @@ const Commercial = () => {
           </p>
           
           
-          <h1 className="text-3xl sm:text-4xl font-alatsi md:text-6xl  leading-tight mt-2">
+          <h1 className="text-3xl sm:text-4xl  md:text-6xl  leading-tight mt-2">
             Studio VisualFX (Pvt) Ltd.
           </h1>
 

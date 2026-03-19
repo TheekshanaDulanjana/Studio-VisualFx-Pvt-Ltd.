@@ -41,11 +41,11 @@ export default function ProductionCategories() {
           
           {/* Left Content */}
           <div className="flex flex-col justify-center font-[Alata]">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6 font-[Alatsi] text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6 font-belleza  text-center lg:text-left">
               Turning Moments Into Cinematic Stories That Inspire
             </h2>
 
-            <p className="text-gray-300 max-w-2xl mx-auto lg:mx-0 text-base text-center lg:text-justify sm:text-lg leading-relaxed">
+            <p className="text-gray-300  font-roboto  max-w-2xl mx-auto lg:mx-0 text-base text-center lg:text-justify sm:text-base leading-relaxed">
               Studio VisualFX transforms your most cherished moments into
               stunning visual stories. From heartfelt weddings and lively
               events to creative commercials and music videos, we craft
@@ -55,15 +55,15 @@ export default function ProductionCategories() {
           </div>
 
           {/* Wedding Highlight Card - Visible only on Laptop (lg+) */}
-          <div className="hidden lg:block relative rounded-2xl overflow-hidden outline outline-white/30 shadow-2xl h-[350px] group">
+          <div className="hidden lg:block relative rounded-[16px] overflow-hidden outline outline-white/30 shadow-2xl h-[350px] group">
             <img
               src={wedding}
               alt="Creative Wedding Films"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
-              <h3 className="text-2xl mb-2 font-[Alatsi]">Creative Wedding Films</h3>
-              <p className="text-sm text-gray-200 font-[Alata] max-w-sm">
+              <h3 className="text-[2xl] mb-2 font-belleza">Creative Wedding Films</h3>
+              <p className="text-[14px] text-gray-200 font-roboto  max-w-sm">
                 Capture your love story with cinematic moments, emotions, and memories that last a lifetime.
               </p>
             </div>
@@ -82,7 +82,7 @@ export default function ProductionCategories() {
           {allCategories.map((item, index) => (
             <div
               key={index}
-              className={`relative rounded-xl  overflow-hidden group h-64 sm:h-72 md:h-80 outline outline-white/30 lg:h-64 
+              className={`relative rounded-[16px]  overflow-hidden group h-64 sm:h-72 md:h-80 outline outline-white/30 lg:h-64 
                 ${index === 0 ? "lg:hidden" : "block"}`}
             >
               <img
@@ -93,10 +93,10 @@ export default function ProductionCategories() {
 
               {/* Gradient Overlay */}
               <div className="absolute  inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent p-6 flex flex-col justify-end">
-                <h4 className="text-xl mb-2 font-[Alatsi]  transition-colors">
+                <h4 className="text-xl mb-2 font-belleza  transition-colors">
                   {item.title}
                 </h4>
-                <p className="text-sm text-gray-200 font-[Alata] leading-snug">
+                <p className="text-[12px] text-gray-200 font-roboto leading-snug">
                   {item.desc}
                 </p>
               </div>

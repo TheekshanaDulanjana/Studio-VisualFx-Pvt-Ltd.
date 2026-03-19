@@ -83,20 +83,19 @@ export default function Testimonials() {
               />
             ))}
             {remainingCount > 0 && (
-              <span className="ml-2 text-sm sm:text-base text-black">
+              <span className="ml-2 text-sm sm:text-base font-roboto text-black">
                 +{remainingCount} Testimonials
               </span>
             )}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 font-alatsi leading-snug">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-belleza lg:text-5xl mb-4 sm:mb-6  ">
             What our clients are <br /> saying about us?
           </h2>
 
-          <p className="text-gray-300 max-w-md text-justify sm:text-lg">
+          <p className="text-gray-300 max-w-md font-roboto text-justify sm:text-base">
             Hear from the couples and clients whose most precious moments we’ve captured.
             Hear from the couples and clients whose most .
-            Hear from the couples and clients whose most precious moments we’ve captured.
           </p>
         </div>
 

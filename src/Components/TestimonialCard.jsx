@@ -4,7 +4,7 @@ export default function TestimonialCard({ testimonial }) {
   const { username, image, eventType, message, date } = testimonial;
 
   return (
-    <div className="group relative rounded-2xl overflow-hidden h-72 sm:h-72 flex-none w-[280px] sm:w-[350px] md:w-[380px] lg:w-[400px] snap-center">
+    <div className="group relative rounded-[16px] overflow-hidden h-72 sm:h-72 flex-none w-[280px] sm:w-[350px] md:w-[380px] lg:w-[400px] snap-center">
       <img
         src={image}
         alt={username}
@@ -20,8 +20,8 @@ export default function TestimonialCard({ testimonial }) {
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
           />
           <div >
-            <h3 className="text-black text-sm sm:text-base font-alatsi">{username}</h3>
-            <p className="text-black/80 text-sm sm:text-base font-alatsi -mt-1">{eventType}</p>
+            <h3 className="text-black text-sm font-belleza sm:text-base ">{username}</h3>
+            <p className="text-black/80 text-sm sm:text-sm font-roboto  -mt-1">{eventType}</p>
           </div>
         </div>
       </div>
@@ -35,16 +35,16 @@ export default function TestimonialCard({ testimonial }) {
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border border-white"
           />
           <div>
-            <h3 className="font-alatsi text-black text-sm sm:text-base">{username}</h3>
-            <p className="text-black/70 text-sm sm:text-base font-alatsi -mt-1">{eventType}</p>
+            <h3 className=" text-black text-sm font-belleza sm:text-base">{username}</h3>
+            <p className="text-black/70 text-sm sm:text-sm font-roboto -mt-1">{eventType}</p>
           </div>
         </div>
 
-        <p className="text-black/70 text-justify font-[Alata] text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-5">
+        <p className="text-black/70 text-justify font-roboto text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-5">
           "{message}"
         </p>
 
-        <p className="font-[Alata] text-white text-[10px] sm:text-xs absolute bottom-2 sm:bottom-4 right-4 sm:right-6">
+        <p className="font-roboto text-white text-[10px] sm:text-xs absolute bottom-2 sm:bottom-4 right-4 sm:right-6">
           {date}
         </p>
       </div>
@@ -58,16 +58,16 @@ export default function TestimonialCard({ testimonial }) {
             className="w-10 h-10 rounded-full object-cover border border-white"
           />
           <div>
-            <h3 className="font-alatsi text-black text-sm sm:text-base">{username}</h3>
-            <p className="text-black/70 text-sm sm:text-base font-alatsi -mt-1">{eventType}</p>
+            <h3 className=" text-black text-sm font-belleza sm:text-base">{username}</h3>
+            <p className="text-black/70 text-sm sm:text-sm font-roboto -mt-1">{eventType}</p>
           </div>
         </div>
 
-        <p className="text-black/70 text-justify font-[Alata] text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-5">
+        <p className="text-black/70 text-justify font-roboto text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-5">
           "{message}"
         </p>
 
-        <p className="font-[Alata] text-black text-[10px] sm:text-xs absolute bottom-2 sm:bottom-4 right-4 sm:right-6">
+        <p className="font-roboto text-black text-[10px] sm:text-xs absolute bottom-2 sm:bottom-4 right-4 sm:right-6">
           {date}
         </p>
       </div>

@@ -22,17 +22,17 @@ export default function LandingAbout() {
       
       {/* Header Section */}
       <div className="mb-12">
-        <p className="text-white text-lg sm:text-xl lg:text-2xl mb-4 opacity-90">
+        <p className="text-white text-lg font-roboto sm:text-xl lg:text-2xl mb-2 opacity-90">
           The eyes behind stories!
         </p>
 
-        <div className="w-24 sm:w-72 border-t border-white mb-10" />
+        <div className="w-16 sm:w-54 border-t border-white mb-6" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-2">
           
           {/* Left Title - Takes up 7/12 of the grid on desktop */}
           <div className="lg:col-span-7">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-[1.1] font-[Alatsi] text-white">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-[1.1] font-belleza text-white">
               Crafting Timeless Visual Stories <br className="hidden sm:block" />
               Through Passion, Vision, and <br className="hidden sm:block" />
               Authentic Creativity!
@@ -41,7 +41,7 @@ export default function LandingAbout() {
 
           {/* Right Content - Takes up 5/12 of the grid on desktop */}
           <div className="lg:col-span-5 flex flex-col justify-between items-start">
-            <p className="text-gray-200 text-base sm:text-base leading-relaxed text-justify lg:text-justify">
+            <p className="text-gray-200 font-roboto text-sm sm:text-base leading-relaxed text-justify lg:text-justify">
               At Studio VisualFX, we bring real moments to life through cinematic storytelling.
               Our team blends artistry with modern filmmaking to transform your emotions,
               celebrations, and memories into unforgettable visual experiences.
@@ -55,9 +55,9 @@ export default function LandingAbout() {
                            font-[Alata] text-black px-4 py-2 rounded-full 
                            hover:bg-black hover:text-white border border-transparent
                            hover:border-white transition-all duration-300 
-                           text-sm md:text-base cursor-pointer"
+                           text-sm md:text-base cursor-pointer "
               >
-                <span>Explore more</span>
+                <span className="font-roboto">Explore more</span>
                 <span className="flex items-center justify-center w-6 h-6 bg-black rounded-full group-hover:bg-white transition-colors duration-300">
                   <FaArrowRight className="text-white text-xs group-hover:text-black transition-colors duration-300" />
                 </span>
@@ -73,7 +73,7 @@ export default function LandingAbout() {
           {videos.map((video) => (
             <div 
               key={video.id} 
-              className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-zinc-900 cursor-pointer hover:scale-[1.03] transition-transform duration-500 group"
+              className="relative aspect-video rounded-[16px] overflow-hidden shadow-2xl bg-zinc-900 cursor-pointer hover:scale-[1.03] transition-transform duration-500 group"
               onClick={() => setActiveVideo(video.id)}
             >
               {/* Thumbnail */}
@@ -87,7 +87,7 @@ export default function LandingAbout() {
                   
                   {/* Custom Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors duration-300"> 
-                    <div className="w-16 h-10 bg-white/30 backdrop-blur-md rounded-xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-10 bg-white/30 backdrop-blur-md rounded-[8px] flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
                       <div className="w-0 h-0 border-l-16 border-l-white border-t-[9px] border-t-transparent border-b-[9px] border-b-transparent ml-1"></div>
                     </div>
                   </div>

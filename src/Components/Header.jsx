@@ -90,7 +90,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex space-x-8 xl:space-x-10 text-gray-200 font-thin font-[Alata]">
+          <nav className="hidden lg:flex space-x-8 xl:space-x-10 text-gray-200 font-thin font-roboto">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -110,7 +110,7 @@ const Header = () => {
                        hover:bg-black hover:text-white 
                        transition-all duration-200 text-sm xl:text-base  cursor-pointer"
           >
-            <span>Commercial</span>
+            <span className="font-roboto">Commercial</span>
             <span className="flex items-center justify-center w-6 h-6 bg-black rounded-full group-hover:bg-white transition">
               <FaArrowRight className="text-white text-xs group-hover:text-black transition" />
             </span>
@@ -121,7 +121,7 @@ const Header = () => {
             onClick={() => setIsMenuOpen(true)}
             className="lg:hidden p-2 rounded-full hover:bg-white/10 transition"
           >
-            <Menu className="w-6 h-6 text-white" />
+            <Menu className="w-6 h-6  text-white" />
           </button>
         </div>
       </header>
@@ -138,7 +138,7 @@ const Header = () => {
         <div className="absolute inset-0 bg-black/60 backdrop-blur-md" />
 
         {/* Content */}
-        <div className="relative flex flex-col h-full px-6 py-8 text-white">
+        <div className="relative flex flex-col h-full px-6 py-8 font-roboto text-white">
           {/* Top */}
           <div className="flex items-center justify-between">
             <img src={Logo} alt="Studio Visual FX" className="h-10" />
@@ -156,7 +156,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative group text-2xl font-[Alata] tracking-wide transition-all"
+                className="relative group text-2xl font-roboto tracking-wide transition-all"
               >
                 <span className="group-hover:text-[#E29D42] transition">
                   {item.label}
@@ -175,7 +175,7 @@ const Header = () => {
                          px-6 py-4 rounded-full 
                          hover:bg-white transition-all duration-300"
             >
-              <span className="text-lg">Commercial</span>
+              <span className="text-lg font-semibold font-roboto">Commercial</span>
               <span className="flex items-center justify-center w-8 h-8 bg-black rounded-full">
                 <FaArrowRight className="text-white text-sm" />
               </span>

@@ -65,14 +65,14 @@ const Contact = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-alatsi md:mt-20 mb-4">
+        <h2 className="text-3xl sm:text-4xl font-belleza lg:text-5xl md:mt-20 mb-4">
           Get in Touch
         </h2>
-        <h2 className="text-xl md:text-2xl font-alatsi  mb-4 ">
+        <h2 className="text-lg md:text-lg font-roboto mb-4 ">
           Let’s create something meaningful together.
         </h2>
 
-        <p className="text-gray-300 font-[Alata] text-sm sm:text-md md:text-lg leading-relaxed mb-16">
+        <p className="text-gray-300 font-roboto text-sm sm:text-md md:text-base leading-relaxed mb-16">
          
 
         Whether you’re planning a wedding, event, commercial project, 
@@ -84,7 +84,7 @@ const Contact = () => {
           {/* Left Column */}
           <div className="lg:w-1/2 space-y-8">
   {/* General Inquiries */}
-  <h3 className="text-xl md:text-3xl font-alatsi mb-8">
+  <h3 className="text-xl md:text-3xl font-belleza mb-8">
     General Inquiries
   </h3>
 
@@ -95,9 +95,9 @@ const Contact = () => {
     <div>
       <div className="flex items-center mb-1">
         <FaPhone className="mr-2 text-white text-lg" />
-        <span className="font-[Alata] text-lg">Dial</span>
+        <span className="font-belleza text-lg">Dial</span>
       </div>
-      <div className="flex flex-col ml-6 font-[Alata] space-y-1">
+      <div className="flex flex-col ml-6 font-roboto space-y-1">
         <a
           className="text-gray-300 hover:text-white transition"
           href="tel:+971569169750"
@@ -111,9 +111,9 @@ const Contact = () => {
     <div>
       <div className="flex items-center mb-1">
         <FaWhatsapp className="mr-2 text-white text-xl" />
-        <span className="font-[Alata] text-lg">Whatsapp</span>
+        <span className="font-belleza text-lg">Whatsapp</span>
       </div>
-      <div className="flex flex-col ml-6 font-[Alata] space-y-1">
+      <div className="flex flex-col ml-6 font-roboto space-y-1">
         <a
           className="text-gray-300 hover:text-white transition"
           href="https://wa.me/971569169750"
@@ -130,9 +130,9 @@ const Contact = () => {
     <div>
       <div className="flex items-center mb-1">
         <FaLink className="mr-2 text-white text-lg" />
-        <span className="font-[Alata] text-lg">Catch us on us!</span>
+        <span className="font-belleza text-lg">Catch us on us!</span>
       </div>
-      <div className="ml-6 text-gray-300 hover:text-white space-y-1">
+      <div className="ml-6 text-gray-300 font-roboto hover:text-white space-y-1">
         <p>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
             Facebook
@@ -155,9 +155,9 @@ const Contact = () => {
     <div>
       <div className="flex items-center mb-1">
         <FaEnvelope className="mr-2 text-white text-lg" />
-        <span className="font-[Alata] text-lg">Email</span>
+        <span className="font-belleza text-lg">Email</span>
       </div>
-      <div className="ml-6 font-[Alata]">
+      <div className="ml-6 font-roboto">
         <a
           href="mailto:finxawards@gmail.com"
           className="text-gray-300 hover:text-white transition"
@@ -173,19 +173,19 @@ const Contact = () => {
 
 
           {/* Right Column (Form) */}
-          <div className="lg:w-2/3 outline outline-white rounded-2xl p-8 ">
-            <h2 className="text-2xl sm:text-3xl font-alatsi text-white mb-8">
+          <div className="lg:w-2/3 outline outline-white rounded-[16px] p-8 ">
+            <h2 className="text-2xl sm:text-3xl font-belleza  text-white mb-8">
               Send Message
             </h2>
 
-            <form ref={form} onSubmit={sendEmail} className="space-y-4  font-[Alata]">
+            <form ref={form} onSubmit={sendEmail} className="space-y-4  font-roboto">
               {/* Row 1 */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
                   name="firstName"
                   placeholder="First Name"
-                  className="flex-1 h-12 p-3  text-sm font-[Alata] hover:outline-white rounded-lg border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.firstName}
                   onChange={handleChange}
@@ -194,7 +194,7 @@ const Contact = () => {
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
-                  className="flex-1 h-12 p-3  text-sm font-[Alata] hover:outline-white rounded-lg border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.lastName}
                   onChange={handleChange}
@@ -207,7 +207,7 @@ const Contact = () => {
                   type="text"
                   name="mobile"
                   placeholder="Mobile"
-                  className="flex-1 h-12 p-3  text-sm font-[Alata] hover:outline-white rounded-lg border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.mobile}
                   onChange={handleChange}
@@ -216,7 +216,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="flex-1 h-12 p-3  text-sm font-[Alata] hover:outline-white rounded-lg border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.email}
                   onChange={handleChange}
@@ -230,7 +230,7 @@ const Contact = () => {
                   type="text"
                   name="subject"
                   placeholder="Subject"
-                  className="w-full h-12 p-3  text-sm font-[Alata] hover:outline-white rounded-lg border border-white/40 focus:outline-white transition"
+                  className="w-full h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.subject}
                   onChange={handleChange}
@@ -244,7 +244,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   placeholder="Message"
-                  className="w-full h-32 p-3  text-sm font-[Alata] hover:outline-white rounded-lg border border-white/40 focus:outline-white transition"
+                  className="w-full h-32 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.message}
                   onChange={handleChange}
@@ -254,7 +254,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={!formValid}
-                className={`w-full py-3 cursor-pointer  bg-white hover:bg-white text-black rounded-lg ${formValid
+                className={`w-full py-3 cursor-pointer font-roboto bg-white hover:bg-white text-black rounded-[8px] ${formValid
                   ? "bg-white hover:bg-white"
                   : "bg-gray-00 opacity-60 cursor-not-allowed"
                   }`}
@@ -268,12 +268,12 @@ const Contact = () => {
         {/* Modal */}
         {modal.show && (
           <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50">
-            <div className="bg-transparent backdrop-blur-xl rounded-lg outline-2 outline-white  p-6 w-80 sm:w-96 text-center">
-              <h2 className="text-xl font-alatsi texxt-white mb-3">Thank You!</h2>
-              <p className="text-gray-400 font-[Alata] mb-6">{modal.message}</p>
+            <div className="bg-transparent backdrop-blur-xl rounded-[16px] outline-2 outline-white  p-6 w-80 sm:w-96 text-center">
+              <h2 className="text-xl text-white font-belleza mb-3">Thank You!</h2>
+              <p className="text-gray-400 font-roboto mb-6">{modal.message}</p>
               <button
                 onClick={closeModal}
-                className="w-48 bg-gray-300 font-[Alata] text-black py-2 rounded-md hover:bg-white cursor-pointer"
+                className="w-48 bg-gray-300 font-roboto text-black py-2 rounded-[8px] hover:bg-white cursor-pointer"
               >
                 Ok
               </button>
