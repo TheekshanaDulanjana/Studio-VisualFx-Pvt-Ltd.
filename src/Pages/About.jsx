@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from '../Components/profile';
+import Profile from '../Components/Profile';
 
 export default function About() {
   return (
