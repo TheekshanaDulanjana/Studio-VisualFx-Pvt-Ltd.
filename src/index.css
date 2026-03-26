@@ -73,6 +73,27 @@
   }
 }
 
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* Fluid typography for hero heading and paragraph to improve fit on all devices
 h1.h2.font-belleza {
   font-size: clamp(1.8rem, 2.4vw + 0.8rem, 4.5rem) !important;

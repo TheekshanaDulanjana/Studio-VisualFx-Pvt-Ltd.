@@ -1,6 +1,6 @@
-import { FaLinkedin, FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
-import Finax from "../assets/StudioVisualFX.png";
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
+import Finax from "../assets/StudioVisualFX.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Footer() {
@@ -19,24 +19,25 @@ export default function Footer() {
   const handleScroll = (id) => {
     if (id === "film-gallery") {
       navigate("/film-gallery");
+      window.scrollTo(0, 0); 
       return;
     }
 
     if (id === "about") {
       navigate("/about");
+      window.scrollTo(0, 0);
       return;
     }
 
-    // If not on Home page, navigate first then scroll
     if (location.pathname !== "/") {
       navigate("/");
-
+      
       setTimeout(() => {
         const section = document.getElementById(id);
         if (section) {
           section.scrollIntoView({ behavior: "smooth" });
         }
-      }, 300);
+      }, 800);
     } else {
       const section = document.getElementById(id);
       if (section) {
@@ -46,69 +47,41 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-white font-[Alata]">
-      <div className="max-w-7xl mx-auto py-4">
-        {/* Top Divider */}
-        <div className="border-t border-gray-700"></div>
+    <footer className="text-white  bg-black">
+      <div className="max-w-7xl mx-auto sm:px-0 md:px-8 lg:px-0 md:py-6">
+        <div className="border-t border-gray-800"></div>
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mt-10">
-          {/* Left Section - Logo & Social */}
-          <div className="md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
-            <img
-              src={Finax}
-              alt="Finax Logo"
-              className="w-28 mb-4 mx-auto md:mx-0"
-            />
-            <p className="text-sm leading-relaxed font-roboto max-w-full md:max-w-sm">
-              We are at the intersection of finance and technology. We empower the
-              Fintech community through high-impact events and authoritative content.
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mt-10">
+          <div className="sm:col-span-2 lg:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
+            <img src={Finax} alt="Logo" className="w-24 md:w-28 mb-4" />
+            <p className="text-sm md:text-sm leading-relaxed font-roboto max-w-sm text-white/70">
+              Studio VisualFX brings your stories to life through cinematic visuals,
+              crafting memories that last forever.
             </p>
-
-            <div className="flex gap-3 mt-5 justify-center md:justify-start">
-              {[
-                { icon: FaLinkedin, link: "https://linkedin.com" },
-                { icon: FaFacebookF, link: "https://facebook.com" },
-                { icon: FaInstagram, link: "https://instagram.com" },
-                { icon: FaXTwitter, link: "https://x.com" },
-              ].map((item, idx) => (
-                <a
-                  key={idx}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-md border border-white hover:bg-white hover:text-black transition duration-200"
-                >
-                  <item.icon />
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Award Categories */}
+
+           {/* Service Coverage */}
           <div className="text-center md:text-left">
-            <h3 className=" text-white font-belleza text-lg mb-3">
-              Award Categories
-            </h3>
-            <ul className="space-y-1 text-sm font-roboto text-white/70">
-              {["Traders Award", "Brokers Award", "Support Services"].map(
-                (award, idx) => (
-                  <li key={idx}>{award}</li>
-                )
-              )}
+            <h3 className="text-white font-belleza text-lg mb-4">Service Coverage</h3>
+            <ul className="space-y-2 text-sm md:text-sm font-roboto">
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <p className="text-white/70 hover:text-white">Matara, Sri Lanka</p>
+              </li>
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <p className="text-white/70 hover:text-white">Colombo, Sri Lanka </p>
+              </li>
             </ul>
           </div>
 
           {/* Quick Links */}
           <div className="text-center md:text-left">
-            <h3 className=" text-white  font-belleza text-lg mb-3">
-              Quick Links
-            </h3>
-            <ul className="space-y-1 text-sm font-roboto text-white/70">
+            <h3 className="text-white font-belleza text-lg mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm md:text-sm font-roboto text-white/60">
               {navItems.map((item) => (
                 <li
                   key={item.id}
-                  className="cursor-pointer hover:text-white"
+                  className="cursor-pointer hover:text-white transition-colors"
                   onClick={() => handleScroll(item.id)}
                 >
                   {item.label}
@@ -117,40 +90,62 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Social Presence */}
           <div className="text-center md:text-left">
-            <h3 className=" text-white font-belleza text-lg mb-3">
-              Contact Us
-            </h3>
-            <ul className="space-y-2 text-sm font-roboto">
-              <li className="flex items-center justify-center md:justify-start gap-2">
-                <FaPhone className="text-white/70" />
-                <a
-                  href="tel:+971569169750"
-                  className="text-white/70 hover:text-white"
-                >
-                  +971 56 916 9750
-                </a>
+            <h3 className="text-white font-belleza text-lg mb-4">Social Presence</h3>
+            <ul className="space-y-2 text-sm md:text-sm font-roboto">
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <FaWhatsapp className="text-white/70" />
+                <a href="https://wa.me/your-number" className="text-white/70 hover:text-white">Whatsapp</a>
               </li>
-              <li className="flex items-center justify-center md:justify-start gap-2 mt-2">
-                <FaEnvelope className="text-white/70" />
-                <a
-                  href="mailto:finxawards@gmail.com"
-                  className="text-white/70 hover:text-white"
-                >
-                  finxawards@gmail.com
-                </a>
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <FaFacebookF className="text-white/70" />
+                <a href="https://facebook.com" className="text-white/70 hover:text-white">Facebook</a>
+              </li>
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <FaInstagram className="text-white/70" />
+                <a href="https://instagram.com" className="text-white/70 hover:text-white">Instagram</a>
+              </li>
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <FaTiktok className="text-white/70" />
+                <a href="https://tiktok.com" className="text-white/70 hover:text-white">Tik Tok</a>
               </li>
             </ul>
           </div>
+
+         
+
+                    {/* Contact Us */}
+          <div className="text-center md:text-left">
+            <h3 className="text-white font-belleza text-lg mb-4">Contact Us</h3>
+            <ul className="space-y-2 text-sm md:text-sm font-roboto">
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <FaPhone className="text-white/70" />
+                <a href="tel:+971569169750" className="text-white/70 hover:text-white">+971 56 916 9750</a>
+              </li>
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <FaEnvelope className="text-white/70" />
+                <a href="mailto:studiovisualfx@gmail.com" className="text-white/70 hover:text-white">studiovisualfx@gmail</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-4">
-          <div className="flex justify-center items-center text-sm font-roboto text-white/70">
-            <p className="text-center">
+        <div className="border-t border-gray-800 mt-10 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 font-roboto">
+            <p className="text-center md:text-left text-[10px] md:text-[10px] uppercase tracking-[0.2em] text-white/50">
               © {new Date().getFullYear()} Studio VisualFx (Pvt) Ltd. All Rights Reserved.
             </p>
+            <div className="flex gap-8">
+              <button onClick={() => { navigate("/privacy-policy"); window.scrollTo(0,0); }} className="text-white/50 hover:text-white text-[9px] md:text-[10px] uppercase tracking-[0.15em]">
+                Privacy Policy
+              </button>
+              <button onClick={() => { navigate("/terms-conditions"); window.scrollTo(0,0); }} className="text-white/50 hover:text-white text-[9px] md:text-[10px] uppercase tracking-[0.15em]">
+                Terms & Conditions
+              </button>
+            </div>
           </div>
         </div>
       </div>

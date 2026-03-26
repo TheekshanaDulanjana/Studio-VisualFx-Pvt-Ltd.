@@ -90,12 +90,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex space-x-8 xl:space-x-10 text-gray-200 font-thin font-roboto">
+          <nav className="hidden lg:flex space-x-8 xl:space-x-10 text-white  font-roboto">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="hover:text-white cursor-pointer transition-colors duration-200 text-sm xl:text-base"
+                className="hover:text-white cursor-pointer transition-colors duration-200 text-sm xl:text-xs hover:font-semibold uppercase tracking-widest relative"
               >
                 {item.label}
               </button>
@@ -106,9 +106,9 @@ const Header = () => {
           <button
             onClick={() => navigate("/commercial")}
             className="group hidden lg:flex items-center gap-3 bg-white 
-                       font-[Alata] text-black px-4 py-2 rounded-full 
+                        text-black px-4 py-2 rounded-full 
                        hover:bg-black hover:text-white 
-                       transition-all duration-200 text-sm xl:text-base  cursor-pointer"
+                       transition-all duration-200 text-sm xl:text-sm  cursor-pointer"
           >
             <span className="font-roboto">Commercial</span>
             <span className="flex items-center justify-center w-6 h-6 bg-black rounded-full group-hover:bg-white transition">
@@ -156,12 +156,12 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative group text-2xl font-roboto tracking-wide transition-all"
+                className="relative group text-sm  font-roboto tracking-widest uppercase transition-all"
               >
-                <span className="group-hover:text-[#E29D42] transition">
+                <span className=" transition">
                   {item.label}
                 </span>
-                <span className="absolute left-0 -bottom-2 w-0 h-0.5 bg-[#E29D42] group-hover:w-full transition-all duration-300" />
+                <span className="absolute left-0 -bottom-2 w-0 h-0.5  group-hover:w-full transition-all duration-300" />
               </button>
             ))}
           </nav>
@@ -170,12 +170,12 @@ const Header = () => {
           <div className="mb-6 items-center justify-center flex">
             <button
               onClick={() => navigate("/commercial")}
-              className="w-48 h-14 flex items-center justify-center gap-4 
-                         bg-white text-black font-[Alata] 
-                         px-6 py-4 rounded-full 
+              className="w-40 h-12 flex items-center justify-center gap-4 
+                         bg-white text-black 
+                         px-4 py-3 rounded-full 
                          hover:bg-white transition-all duration-300"
             >
-              <span className="text-lg font-semibold font-roboto">Commercial</span>
+              <span className="text-sm  font-roboto">Commercial</span>
               <span className="flex items-center justify-center w-8 h-8 bg-black rounded-full">
                 <FaArrowRight className="text-white text-sm" />
               </span>

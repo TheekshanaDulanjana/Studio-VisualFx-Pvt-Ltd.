@@ -68,14 +68,12 @@ const Contact = () => {
         <h2 className="text-3xl sm:text-4xl font-belleza lg:text-5xl md:mt-20 mb-4">
           Get in Touch
         </h2>
-        <h2 className="text-lg md:text-lg font-roboto mb-4 ">
-          Let’s create something meaningful together.
-        </h2>
+    
 
-        <p className="text-gray-300 font-roboto text-sm sm:text-md md:text-base leading-relaxed mb-16">
+        <p className="text-white font-roboto text-sm sm:text-sm md:text-sm leading-relaxed mb-16">
          
 
-        Whether you’re planning a wedding, event, commercial project, 
+        Let’s create something meaningful together. <br /> Whether you’re planning a wedding, event, commercial project, 
         or music video, we’d love to hear your story. <br />Reach out to us with your details, a
         nd let’s discuss how we can bring your vision to life through cinematic storytelling.
         </p>
@@ -104,6 +102,13 @@ const Contact = () => {
         >
           +971 56 916 9750
         </a>
+                <a
+          className="text-gray-300 hover:text-white transition"
+          href="tel:+971569169750"
+        >
+          +971 56 916 9750
+        </a>
+        
       </div>
     </div>
 
@@ -115,6 +120,14 @@ const Contact = () => {
       </div>
       <div className="flex flex-col ml-6 font-roboto space-y-1">
         <a
+          className="text-gray-300 hover:text-white transition"
+          href="https://wa.me/971569169750"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          +971 56 916 9750
+        </a>
+                <a
           className="text-gray-300 hover:text-white transition"
           href="https://wa.me/971569169750"
           target="_blank"
@@ -173,7 +186,7 @@ const Contact = () => {
 
 
           {/* Right Column (Form) */}
-          <div className="lg:w-2/3 outline outline-white rounded-[16px] p-8 ">
+          <div className="lg:w-2/3 outline outline-white rounded-[16px] p-6 ">
             <h2 className="text-2xl sm:text-3xl font-belleza  text-white mb-8">
               Send Message
             </h2>
@@ -185,7 +198,7 @@ const Contact = () => {
                   type="text"
                   name="firstName"
                   placeholder="First Name"
-                  className="flex-1 h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.firstName}
                   onChange={handleChange}
@@ -194,7 +207,7 @@ const Contact = () => {
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
-                  className="flex-1 h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.lastName}
                   onChange={handleChange}
@@ -207,7 +220,7 @@ const Contact = () => {
                   type="text"
                   name="mobile"
                   placeholder="Mobile"
-                  className="flex-1 h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.mobile}
                   onChange={handleChange}
@@ -216,7 +229,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="flex-1 h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.email}
                   onChange={handleChange}
@@ -230,7 +243,7 @@ const Contact = () => {
                   type="text"
                   name="subject"
                   placeholder="Subject"
-                  className="w-full h-12 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="w-full h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.subject}
                   onChange={handleChange}
@@ -244,7 +257,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   placeholder="Message"
-                  className="w-full h-32 p-3  text-sm font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="w-full h-32 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.message}
                   onChange={handleChange}
@@ -270,10 +283,10 @@ const Contact = () => {
           <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50">
             <div className="bg-transparent backdrop-blur-xl rounded-[16px] outline-2 outline-white  p-6 w-80 sm:w-96 text-center">
               <h2 className="text-xl text-white font-belleza mb-3">Thank You!</h2>
-              <p className="text-gray-400 font-roboto mb-6">{modal.message}</p>
+              <p className="text-white text-xs font-roboto mb-6">{modal.message}</p>
               <button
                 onClick={closeModal}
-                className="w-48 bg-gray-300 font-roboto text-black py-2 rounded-[8px] hover:bg-white cursor-pointer"
+                className="w-40 bg-white font-roboto text-black py-2 rounded-[8px] hover:bg-white cursor-pointer"
               >
                 Ok
               </button>

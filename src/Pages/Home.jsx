@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden ">
-      <section className="relative flex  w-screen min-h-screen items-center justify-center px-4">
+      <section className=" relative flex  w-screen min-h-screen items-center justify-center px-4">
 
         {/* Fallback Image */}
         <motion.img
@@ -81,7 +81,7 @@ const Home = () => {
 
           {/* Subtext */}
           <motion.p
-            className="text-white font-roboto font-thin text-sm sm:text-lg md:text-xl mt-4"
+            className="text-white font-roboto  text-sm sm:text-base md:text-lg mt-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
@@ -102,14 +102,14 @@ const Home = () => {
           >
             <button
               onClick={() => navigate("/film-gallery")}
-              className="w-40 h-10 bg-white text-black font-roboto rounded-full hover:bg-black cursor-pointer hover:text-white transition"
+              className="w-40 h-10 bg-white text-sm text-black font-roboto rounded-full hover:bg-black cursor-pointer hover:text-white transition"
             >
               View Portfolio
             </button>
 
             <button
               onClick={scrollToContact}
-              className="w-40 h-10 border border-white text-white font-roboto rounded-full hover:bg-white cursor-pointer hover:text-black transition"
+              className="w-40 h-10 border border-white text-sm text-white font-roboto rounded-full hover:bg-white cursor-pointer hover:text-black transition"
             >
               Book Your Session
             </button>

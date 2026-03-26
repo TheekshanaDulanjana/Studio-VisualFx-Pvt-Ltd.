@@ -58,7 +58,7 @@ const FilmGallery = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="relative w-full h-96 md:h-96 overflow-hidden">
+      <div className="relative  w-full h-96 md:h-80 overflow-hidden">
         <motion.div
           className="w-full h-full"
           initial={{ opacity: 0, filter: 'blur(5px)' }}
@@ -97,7 +97,7 @@ const FilmGallery = () => {
         </motion.div>
         <div className="absolute inset-0 flex flex-col items-center font-belleza justify-center text-center px-4 z-20 mt-28">
           <motion.h1
-            className="text-4xl md:text-5xl  text-white"
+            className="text-3xl md:text-4xl  text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -105,7 +105,7 @@ const FilmGallery = () => {
             Our Films
           </motion.h1>
           <motion.p
-            className="text-md md:text-lg font-roboto text-white mt-2 max-w-3xl"
+            className="text-sm md:text-base font-roboto text-white mt-2 max-w-3xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -127,7 +127,7 @@ const FilmGallery = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
               placeholder="Search your film..."
-              className="w-full font-roboto border shadow-xl border-gray-400 hover:border-white px-4 py-2 pr-10 bg-transparent rounded-full text-white backdrop-blur-xs focus:outline-none focus:border-white transition duration-300"
+              className="w-full font-roboto text-sm tracking-wide border shadow-xl border-gray-400 hover:border-white px-4 py-2  bg-transparent rounded-full text-white backdrop-blur-xs focus:outline-none focus:border-white transition duration-300"
             />
             <button
               onClick={handleSearch}
@@ -150,7 +150,7 @@ const FilmGallery = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white/20 backdrop-blur-sm rounded-lg border border-white shadow-lg overflow-hidden cursor-pointer hover:scale-105 transition transform duration-300"
+                  className="bg-white/20 backdrop-blur-sm rounded-[16px] border border-white shadow-lg overflow-hidden cursor-pointer hover:scale-105 transition transform duration-300"
                   onClick={() => window.open(film.link, '_blank')}
                 >
                   <div className="relative w-full h-50 bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden">
@@ -166,15 +166,15 @@ const FilmGallery = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="p-4 text-center font-roboto text-white ">{film.coupleName}</div>
+                  <div className="p-4 text-center text-sm font-roboto text-white ">{film.coupleName}</div>
                 </div>
               );
             })}
           </div>
         ) : (
           <div className="text-center text-white mt-24 mb-24">
-            <h2 className="text-3xl mb-2">No results found!</h2>
-            <p className="text-lg font-[Alata]">Sorry, we couldn't find anything matching your search!</p>
+            <h2 className="text-2xl font-belleza mb-2">No results found!</h2>
+            <p className="text-sm font-roboto">Sorry, we couldn't find anything matching your search!</p>
           </div>
         )}
 
@@ -183,9 +183,9 @@ const FilmGallery = () => {
           <div className="mt-8 flex items-center justify-center">
             <button
               onClick={() => setShowMore(!showMore)}
-              className="w-40 h-11 flex items-center justify-center gap-2 
-                        bg-white text-black font-[Alata] 
-                        px-6 py-4 rounded-full 
+              className="w-35 h-10 flex items-center justify-center gap-2 
+                        bg-white text-black font-roboto text-sm  
+                        px-4 py-4 rounded-full 
                         hover:bg-white transition-all duration-300 cursor-pointer"
             >
               <span className="text-md">{showMore ? "Show Less" : "Show More"}</span>

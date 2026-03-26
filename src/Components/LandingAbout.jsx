@@ -22,11 +22,11 @@ export default function LandingAbout() {
       
       {/* Header Section */}
       <div className="mb-12">
-        <p className="text-white text-lg font-roboto sm:text-xl lg:text-2xl mb-2 opacity-90">
+        <p className="text-white text-xs font-roboto sm:text-xl lg:text-sm  mb-2 uppercase tracking-widest">
           The eyes behind stories!
         </p>
 
-        <div className="w-16 sm:w-54 border-t border-white mb-6" />
+        <div className="w-16 sm:w-53 border-t border-white mb-6" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-2">
           
@@ -41,7 +41,7 @@ export default function LandingAbout() {
 
           {/* Right Content - Takes up 5/12 of the grid on desktop */}
           <div className="lg:col-span-5 flex flex-col justify-between items-start">
-            <p className="text-gray-200 font-roboto text-sm sm:text-base leading-relaxed text-justify lg:text-justify">
+            <p className="text-gray-200 font-roboto text-sm sm:text-sm leading-relaxed mt-6 sm:mt-0 text-justify lg:text-justify">
               At Studio VisualFX, we bring real moments to life through cinematic storytelling.
               Our team blends artistry with modern filmmaking to transform your emotions,
               celebrations, and memories into unforgettable visual experiences.
@@ -52,14 +52,14 @@ export default function LandingAbout() {
               <button
                 onClick={handleExploreClick}
                 className="group flex items-center gap-2 bg-white 
-                           font-[Alata] text-black px-4 py-2 rounded-full 
+                           font-[Alata] text-black px-3 py-1.5 rounded-full 
                            hover:bg-black hover:text-white border border-transparent
                            hover:border-white transition-all duration-300 
                            text-sm md:text-base cursor-pointer "
               >
-                <span className="font-roboto">Explore more</span>
+                <span className="font-roboto text-xs">Explore more</span>
                 <span className="flex items-center justify-center w-6 h-6 bg-black rounded-full group-hover:bg-white transition-colors duration-300">
-                  <FaArrowRight className="text-white text-xs group-hover:text-black transition-colors duration-300" />
+                  <FaArrowRight className="text-white text-[10px] group-hover:text-black transition-colors duration-300" />
                 </span>
               </button>
             </div>

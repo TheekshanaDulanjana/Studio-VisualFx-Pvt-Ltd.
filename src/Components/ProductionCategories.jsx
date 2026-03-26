@@ -45,7 +45,7 @@ export default function ProductionCategories() {
               Turning Moments Into Cinematic Stories That Inspire
             </h2>
 
-            <p className="text-gray-300  font-roboto  max-w-2xl mx-auto lg:mx-0 text-base text-center lg:text-justify sm:text-base leading-relaxed">
+            <p className="text-gray-300  font-roboto  max-w-2xl mx-auto lg:mx-0 text-sm text-center lg:text-justify sm:text-sm leading-relaxed">
               Studio VisualFX transforms your most cherished moments into
               stunning visual stories. From heartfelt weddings and lively
               events to creative commercials and music videos, we craft
@@ -62,8 +62,8 @@ export default function ProductionCategories() {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
-              <h3 className="text-[2xl] mb-2 font-belleza">Creative Wedding Films</h3>
-              <p className="text-[14px] text-gray-200 font-roboto  max-w-sm">
+              <h3 className="text-2xl mb-2 font-belleza">Creative Wedding Films</h3>
+              <p className="text-[12px] text-gray-200 font-roboto  max-w-sm">
                 Capture your love story with cinematic moments, emotions, and memories that last a lifetime.
               </p>
             </div>

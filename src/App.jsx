@@ -1,6 +1,17 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
+// Components
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import ScrollToTop from "./Components/ScrollToTop";
+import LoadingSpinner from "./Components/LoadingSpinner";
+import WhatsappButton from "./Components/WhatsappButton";
+import SmoothScroll from './Components/SmoothScroll'; 
+import ScrollTop from './Components/ScrollToTop';
+
+// Pages
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import FAQ from "./Pages/Faq";
@@ -8,14 +19,8 @@ import Contact from "./Pages/Contact";
 import FilmGallery from "./Pages/FilmGallery";
 import Commercial from "./Pages/Commercial";
 import Testimonials from "./Pages/Testimonials";
-import NotFound from "./Pages/NotFound";
-
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-
-import ScrollToTop from "./Components/ScrollToTop";
-import LoadingSpinner from "./Components/LoadingSpinner";
-import WhatsappButton from "./Components/WhatsappButton";
+import TermofCondition from "./Pages/TermofCondition";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -29,58 +34,80 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      {loading ? <LoadingSpinner /> : <MainApp />}
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        {loading ? <LoadingSpinner /> : <MainApp />}
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
 const MainApp = () => {
   const location = useLocation();
-  const [loading, setLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(false);
 
+  // Page loading spinner logic
   useEffect(() => {
-    const startTimer = setTimeout(() => {
-      setLoading(true);
+    setPageLoading(true);
+    const endTimer = setTimeout(() => {
+      setPageLoading(false);
+    }, 500);
 
-      const endTimer = setTimeout(() => {
-        setLoading(false);
-      }, 500);
-
-      return () => clearTimeout(endTimer);
-    }, 0);
-
-    return () => clearTimeout(startTimer);
+    return () => clearTimeout(endTimer);
   }, [location.pathname]);
 
-  if (loading) return <LoadingSpinner />;
+  // Tab Title change logic
+  useEffect(() => {
+    const pageTitles = {
+      "/": "Home | Studio VisualFX",
+      "/about": "About Us | Studio VisualFX",
+      "/film-gallery": "Film Gallery | Studio VisualFX",
+      "/commercial": "Commercial Projects | Studio VisualFX",
+      "/testimonials": "Testimonials | Studio VisualFX",
+      "/faq": "FAQ | Studio VisualFX",
+      "/contact": "Contact Us | Studio VisualFX",
+      "/privacy-policy": "Privacy Policy | Studio VisualFX",
+      "/terms-conditions": "Terms & Conditions | Studio VisualFX",
+    };
+
+    document.title = pageTitles[location.pathname] || "Studio VisualFX";
+  }, [location.pathname]);
+
+  if (pageLoading) return <LoadingSpinner />;
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen   antialiased">
+      <SmoothScroll /> 
+      <ScrollTop />
+
       <Header />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <section id="home"> <Home /> </section>
-              <section id="testimonials"> <Testimonials /></section>
-              <section id="faq"> <FAQ /> </section>
-              <section id="contact"> <Contact /> </section>
-            </>
-          }
-        />
+      <main className="flex-grow">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="home"> <Home /> </section>
+                <section id="testimonials"> <Testimonials /></section>
+                <section id="faq"> <FAQ /> </section>
+                <section id="contact"> <Contact /> </section>
+              </>
+            }
+          />
 
-        <Route path="/about" element={<About />} />
-        <Route path="/film-gallery" element={<FilmGallery />} />
-        <Route path="/commercial" element={<Commercial />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/film-gallery" element={<FilmGallery />} />
+          <Route path="/commercial" element={<Commercial />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermofCondition />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </main>
 
       <ScrollToTop />
       <WhatsappButton />
       <Footer />
-    </>
+    </div>
   );
 };

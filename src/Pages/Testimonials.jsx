@@ -79,11 +79,11 @@ export default function Testimonials() {
                 key={i}
                 src={t.image}
                 alt={t.username}
-                className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-black object-cover ${i !== 0 ? "-ml-2" : ""}`}
+                className={`w-6 h-6 sm:w-6 sm:h-6 rounded-full border border-black object-cover ${i !== 0 ? "-ml-2" : ""}`}
               />
             ))}
             {remainingCount > 0 && (
-              <span className="ml-2 text-sm sm:text-base font-roboto text-black">
+              <span className="ml-2 text-sm sm:text-sm font-roboto text-black">
                 +{remainingCount} Testimonials
               </span>
             )}
@@ -93,7 +93,7 @@ export default function Testimonials() {
             What our clients are <br /> saying about us?
           </h2>
 
-          <p className="text-gray-300 max-w-md font-roboto text-justify sm:text-base">
+          <p className="text-gray-300 max-w-md font-roboto text-justify sm:text-sm text-sm leading-relaxed">
             Hear from the couples and clients whose most precious moments we’ve captured.
             Hear from the couples and clients whose most .
           </p>

@@ -22,8 +22,8 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
       {/* Answer Row (Conditional) */}
       {isOpen && (
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mt-3 w-full md:w-[95%] animate-in fade-in slide-in-from-top-2 duration-300">
-          <div className="flex-1 bg-gray-300 border border-white rounded-[12px] p-4 sm:p-6 shadow-sm">
-            <p className="text-black font-roboto leading-relaxed text-sm sm:text-sm md:text-base">
+          <div className="flex-1 bg-white  border border-white rounded-[12px] p-4 sm:p-4 shadow-sm">
+            <p className="text-black font-roboto leading-relaxed text-sm sm:text-sm md:text-sm">
               {answer}
             </p>
           </div>
@@ -71,7 +71,7 @@ const FAQSection = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl text-white font-belleza  mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-300 font-roboto text-sm sm:text-base md:text-lg leading-relaxed mb-12 sm:mb-16">
+          <p className="text-gray-300 font-roboto text-sm sm:text-sm md:text-sm leading-relaxed mb-12 sm:mb-16">
             Find answers to common questions about our services, process, and offerings.
           </p>
         </div>

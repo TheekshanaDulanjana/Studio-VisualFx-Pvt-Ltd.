@@ -20,8 +20,8 @@ export default function TestimonialCard({ testimonial }) {
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
           />
           <div >
-            <h3 className="text-black text-sm font-belleza sm:text-base ">{username}</h3>
-            <p className="text-black/80 text-sm sm:text-sm font-roboto  -mt-1">{eventType}</p>
+            <h3 className="text-black text-sm font-belleza sm:text-base  ">{username}</h3>
+            <p className="text-black/80 text-xs sm:text-xs font-roboto  -mt-1">{eventType}</p>
           </div>
         </div>
       </div>
@@ -36,15 +36,15 @@ export default function TestimonialCard({ testimonial }) {
           />
           <div>
             <h3 className=" text-black text-sm font-belleza sm:text-base">{username}</h3>
-            <p className="text-black/70 text-sm sm:text-sm font-roboto -mt-1">{eventType}</p>
+            <p className="text-black/70 text-xs sm:text-xs font-roboto -mt-1">{eventType}</p>
           </div>
         </div>
 
-        <p className="text-black/70 text-justify font-roboto text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-5">
+        <p className="text-black/80 text-justify font-roboto text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-5">
           "{message}"
         </p>
 
-        <p className="font-roboto text-white text-[10px] sm:text-xs absolute bottom-2 sm:bottom-4 right-4 sm:right-6">
+        <p className="font-roboto text-white text-[10px] sm:text-[10px] absolute bottom-2 sm:bottom-4 right-4 sm:right-6">
           {date}
         </p>
       </div>
@@ -59,15 +59,15 @@ export default function TestimonialCard({ testimonial }) {
           />
           <div>
             <h3 className=" text-black text-sm font-belleza sm:text-base">{username}</h3>
-            <p className="text-black/70 text-sm sm:text-sm font-roboto -mt-1">{eventType}</p>
+            <p className="text-black/70 text-xs sm:text-xs font-roboto -mt-1">{eventType}</p>
           </div>
         </div>
 
-        <p className="text-black/70 text-justify font-roboto text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-5">
+        <p className="text-black/80 text-justify font-roboto text-xs sm:text-sm  mb-3 sm:mb-4 line-clamp-5">
           "{message}"
         </p>
 
-        <p className="font-roboto text-black text-[10px] sm:text-xs absolute bottom-2 sm:bottom-4 right-4 sm:right-6">
+        <p className="font-roboto text-black text-[10px] sm:text-[10px] absolute bottom-2 sm:bottom-4 right-4 sm:right-6">
           {date}
         </p>
       </div>
