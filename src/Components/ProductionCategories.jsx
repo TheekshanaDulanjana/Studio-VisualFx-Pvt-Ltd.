@@ -33,7 +33,7 @@ export default function ProductionCategories() {
   ];
 
   return (
-    <section className="bg-black text-white py-12 md:py-16 px-4">
+    <section className=" text-white py-12 md:py-16 px-6">
       <div className="max-w-7xl mx-auto">
         
         {/* TOP SECTION: Text and Highlight Card (Laptop View) */}

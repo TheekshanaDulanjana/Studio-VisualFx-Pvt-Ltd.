@@ -68,7 +68,7 @@ export default function Testimonials() {
   const handleTouchEnd = () => setIsDragging(false);
 
   return (
-    <section className="bg-black text-white py-12 sm:py-16 px-4">
+    <section className=" text-white py-12 sm:py-16 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
 
         {/* LEFT SIDE */}

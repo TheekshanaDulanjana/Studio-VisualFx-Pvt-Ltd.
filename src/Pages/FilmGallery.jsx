@@ -58,7 +58,7 @@ const FilmGallery = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="relative  w-full h-96 md:h-80 overflow-hidden">
+      <div className="relative  w-full h-96 md:h-80  overflow-hidden">
         <motion.div
           className="w-full h-full"
           initial={{ opacity: 0, filter: 'blur(5px)' }}
@@ -105,7 +105,7 @@ const FilmGallery = () => {
             Our Films
           </motion.h1>
           <motion.p
-            className="text-sm md:text-base font-roboto text-white mt-2 max-w-4xl"
+            className="text-sm md:text-base font-roboto text-white mt-2  max-w-4xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -118,7 +118,7 @@ const FilmGallery = () => {
 
           {/* Search Bar */}
           <motion.div
-            className="w-full max-w-md relative mt-6"
+            className="w-full max-w-md relative mt-6 "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
@@ -142,7 +142,7 @@ const FilmGallery = () => {
       </div>
 
       {/* Film Cards Section */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-12">
         {filmsToShow.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {filmsToShow.map((film, index) => {

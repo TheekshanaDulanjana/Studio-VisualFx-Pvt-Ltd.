@@ -18,7 +18,7 @@ export default function LandingAbout() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto py-12 md:py-20 px-4 sm:px-6 lg:px-8 font-[Alata] flex flex-col justify-center">
+    <section className="max-w-7xl mx-auto py-12 md:py-20 px-6 sm:px-6 lg:px-8 font-[Alata] flex flex-col justify-center">
       
       {/* Header Section */}
       <div className="mb-12">

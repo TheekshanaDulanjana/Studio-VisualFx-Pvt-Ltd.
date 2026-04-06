@@ -59,7 +59,7 @@ const Contact = () => {
   const closeModal = () => setModal({ show: false, message: "" });
 
   return (
-    <div className="w-full px-4 md:px-6 lg:px-8 pb-16 py-12" style={{ color: "white" }}>
+    <div className="w-full px-6 md:px-6 lg:px-8 pb-16 py-12" style={{ color: "white" }}>
       <div className="max-w-7xl mx-auto">
         {/* Flex container */}
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">

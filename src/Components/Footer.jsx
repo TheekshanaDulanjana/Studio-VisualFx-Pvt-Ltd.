@@ -47,8 +47,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-white  bg-black">
-      <div className="max-w-7xl mx-auto sm:px-0 md:px-8 lg:px-0 md:py-6">
+    <footer className="text-white  ">
+      <div className="max-w-7xl mx-auto px-6  lg:px-0 md:py-6">
         <div className="border-t border-gray-800"></div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mt-10">
@@ -163,11 +163,11 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-10 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 font-roboto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 pb-4 font-roboto">
             <p className="text-center md:text-left text-[10px] md:text-[10px] uppercase tracking-widest text-white/50">
              Copyright © {new Date().getFullYear()} Studio VisualFx (Pvt) Ltd. All Rights Reserved.
             </p>
-            <div className="flex gap-8">
+            <div className="flex gap-6">
               <button onClick={() => { navigate("/privacy-policy"); window.scrollTo(0,0); }} className="text-white/50 hover:text-white text-[9px] md:text-[10px] uppercase tracking-wider ">
                 Privacy Policy
               </button>

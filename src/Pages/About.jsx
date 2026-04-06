@@ -6,11 +6,11 @@ export default function About() {
     <div className=" pt-24">
       
       {/* Hero Section */}
-      <section className="py-12 md:py-16 px-4">
+      <section className="py-4 md:py-16 px-6">
         <div className="w-full max-w-7xl mx-auto">
           <div className="max-w-7xl">
             
-            <h1 className="text-4xl text-white md:text-6xl leading-18 tracking-tight mb-6 font-belleza">
+            <h1 className="text-3xl text-white md:text-6xl leading-12 sm:leading-18 tracking-tight mb-6 font-belleza">
               Crafting Timeless Visual Journeys <br />Through Passion, Vision, and Cinematic Creativity
             </h1>
 
@@ -40,7 +40,7 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 md:py-16 px-4 ">
+      <section className="py-12 md:py-16 px-6 ">
         <div className="w-full max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 

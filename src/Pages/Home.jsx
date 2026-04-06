@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden ">
-      <section className=" relative flex  w-screen min-h-screen items-center justify-center px-4">
+      <section className=" relative flex  w-screen min-h-screen items-center justify-center px-6">
 
         {/* Fallback Image */}
         <motion.img

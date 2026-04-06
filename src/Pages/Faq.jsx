@@ -63,7 +63,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-12 px-4 sm:px-6 md:px-12 lg:px-16 ">
+    <section className="py-12 px-6 sm:px-6 md:px-12 lg:px-16 ">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
         
         {/* Left Column: Title and Description */}
