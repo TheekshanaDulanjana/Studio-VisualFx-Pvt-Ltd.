@@ -72,7 +72,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
 
         {/* LEFT SIDE */}
-        <div className="lg:w-5/12 flex flex-col justify-center font-[Alata]">
+        <div className="lg:w-5/12 flex flex-col justify-center">
           <div className="flex items-center mb-4 bg-white rounded-full w-fit px-3 py-2">
             {firstThree.map((t, i) => (
               <img
@@ -94,8 +94,9 @@ export default function Testimonials() {
           </h2>
 
           <p className="text-gray-300 max-w-md font-roboto text-justify sm:text-sm text-sm leading-relaxed">
-            Hear from the couples and clients whose most precious moments we’ve captured.
-            Hear from the couples and clients whose most .
+            Hear directly from our clients about their experiences 
+            working with Studio VisualFX and how we’ve helped bring 
+            their stories to life.
           </p>
         </div>
 

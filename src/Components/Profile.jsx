@@ -25,22 +25,26 @@ const ServiceSection = () => {
               Visionary Director And <br className="hidden sm:block" /> Creative Storyteller
             </h1>
             <p className="text-white font-roboto leading-relaxed max-w-xl mx-auto lg:mx-0 text-sm md:text-sm text-justify lg:text-justify">
-              As the driving force behind Studio VisualFX, Sasanka Dulanjana blends
-               creativity, technical expertise, and storytelling mastery to craft cinematic
-                experiences that resonate with audiences. With extensive experience in videography
-                 and post-production, he ensures every frame reflects both artistic vision
-                  and professional excellence. <br /><br />
-
-                    Passionate about mentoring emerging talent, Sasanka fosters a culture of innovation and 
-                    collaboration. His dedication to authentic storytelling and exceptional quality has made 
-                    Studio VisualFX a trusted name for clients seeking memorable and engaging visual experiences.
+              Mr. Sasanka Dulanjana is the driving creative force behind Studio VisualFX (Pvt) Ltd., 
+              bringing over 7 years of experience in visual storytelling to every project. With 
+              a keen eye for detail and a passion for cinematic excellence, he transforms ideas 
+              into compelling visual narratives that captivate and inspire.
+            <br /><br />
+            As a director and storyteller, Sasanka combines innovation, artistry, and
+             technical expertise to craft experiences that are authentic, emotive, and visually 
+             stunning. His work spans weddings, music videos, events, and commercial productions,
+              each reflecting his commitment to quality and creativity.
+            <br /><br />
+            Guided by a vision to bring stories to life, Sasanka ensures that every frame
+             captures emotion, beauty, and meaning, creating timeless cinematic journeys that 
+             resonate with audiences and leave a lasting impression.
             </p>
 <div className="pt-4 flex items-center gap-2">
   <p className="text-sm font-roboto m-0">Let's Connect!</p>
 
   {/* WhatsApp */}
   <a 
-    href="https://wa.me/your-number" 
+    href="https://wa.me/719896981" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="text-gray-300 hover:text-green-500 transition-colors text-lg"
@@ -50,7 +54,7 @@ const ServiceSection = () => {
 
   {/* Facebook */}
   <a 
-    href="https://www.facebook.com/your-page" 
+    href="https://web.facebook.com/sasankadulanjana0" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="text-gray-300 hover:text-blue-600 transition-colors text-lg"
@@ -60,7 +64,7 @@ const ServiceSection = () => {
 
   {/* Instagram */}
   <a 
-    href="https://www.instagram.com/your-profile" 
+    href="https://www.instagram.com/sasankadulanjana_/" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="text-gray-300 hover:text-pink-500 transition-colors text-lg"
@@ -70,13 +74,15 @@ const ServiceSection = () => {
 
   {/* LinkedIn */}
   <a 
-    href="https://www.linkedin.com/in/your-profile" 
+    href="https://www.linkedin.com/in/sasanka-dulanjana/" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="text-gray-300 hover:text-blue-400 transition-colors text-lg"
   >
     <FaLinkedinIn />
   </a>
+
+  
 </div>
           </div>
 

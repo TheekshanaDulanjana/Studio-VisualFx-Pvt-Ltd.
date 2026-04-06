@@ -59,146 +59,130 @@ const Contact = () => {
   const closeModal = () => setModal({ show: false, message: "" });
 
   return (
-    <div
-      className="w-full px-4 md:px-6 lg:px-8 pb-16"
-      style={{  color: "white" }}
-    >
+    <div className="w-full px-4 md:px-6 lg:px-8 pb-16 py-12" style={{ color: "white" }}>
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <h2 className="text-3xl sm:text-4xl font-belleza lg:text-5xl md:mt-20 mb-4">
-          Get in Touch
-        </h2>
-    
-
-        <p className="text-white font-roboto text-sm sm:text-sm md:text-sm leading-relaxed mb-16">
-         
-
-        Let’s create something meaningful together. <br /> Whether you’re planning a wedding, event, commercial project, 
-        or music video, we’d love to hear your story. <br />Reach out to us with your details, a
-        nd let’s discuss how we can bring your vision to life through cinematic storytelling.
-        </p>
-
-        <div className="flex flex-col lg:flex-row gap-10">
+        {/* Flex container */}
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
           {/* Left Column */}
-          <div className="lg:w-1/2 space-y-8">
-  {/* General Inquiries */}
-  <h3 className="text-xl md:text-3xl font-belleza mb-8">
-    General Inquiries
-  </h3>
+          <div className=" space-y-8">
+            {/* Title + Description */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-belleza lg:text-5xl mb-4">
+                Get in Touch
+              </h2>
+              <p className="text-gray-300 font-roboto text-sm sm:text-sm max-w-xl text-justify leading-relaxed mb-8">
+                Let’s craft something extraordinary together. Whether it’s a wedding, event, commercial
+                production, or music video, we’re here to bring your vision to life.
+                Share your details with us, and let’s discuss how Studio VisualFX can
+                transform your ideas into cinematic stories that inspire and captivate.
+              </p>
+            </div>
 
-  {/* GRID WRAPPER */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 ">
-    
-    {/* Phone */}
-    <div>
-      <div className="flex items-center mb-1">
-        <FaPhone className="mr-2 text-white text-lg" />
-        <span className="font-belleza text-lg">Dial</span>
-      </div>
-      <div className="flex flex-col ml-6 font-roboto space-y-1">
-        <a
-          className="text-gray-300 hover:text-white transition"
-          href="tel:+971569169750"
-        >
-          +971 56 916 9750
-        </a>
-                <a
-          className="text-gray-300 hover:text-white transition"
-          href="tel:+971569169750"
-        >
-          +971 56 916 9750
-        </a>
-        
-      </div>
-    </div>
+            {/* General Inquiries */}
+            <div>
+              <h3 className="text-xl md:text-3xl font-belleza mb-8">General Inquiries</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {/* Phone */}
+                <div>
+                  <div className="flex items-center mb-1">
+                    <FaPhone className="mr-2 text-white text-lg" />
+                    <span className="font-belleza text-lg">Dial</span>
+                  </div>
+                  <div className="flex flex-col ml-6 font-roboto space-y-1">
+                    <a
+                      className="text-gray-300 hover:text-white transition"
+                      href="tel:+971569169750"
+                    >
+                      +971 56 916 9750
+                    </a>
+                    <a
+                      className="text-gray-300 hover:text-white transition"
+                      href="tel:+971569169750"
+                    >
+                      +971 56 916 9750
+                    </a>
+                  </div>
+                </div>
 
-    {/* WhatsApp */}
-    <div>
-      <div className="flex items-center mb-1">
-        <FaWhatsapp className="mr-2 text-white text-xl" />
-        <span className="font-belleza text-lg">Whatsapp</span>
-      </div>
-      <div className="flex flex-col ml-6 font-roboto space-y-1">
-        <a
-          className="text-gray-300 hover:text-white transition"
-          href="https://wa.me/971569169750"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          +971 56 916 9750
-        </a>
-                <a
-          className="text-gray-300 hover:text-white transition"
-          href="https://wa.me/971569169750"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          +971 56 916 9750
-        </a>
-      </div>
-    </div>
+                {/* WhatsApp */}
+                <div>
+                  <div className="flex items-center mb-1">
+                    <FaWhatsapp className="mr-2 text-white text-xl" />
+                    <span className="font-belleza text-lg">Whatsapp</span>
+                  </div>
+                  <div className="flex flex-col ml-6 font-roboto space-y-1">
+                    <a
+                      className="text-gray-300 hover:text-white transition"
+                      href="https://wa.me/971569169750"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      +971 56 916 9750
+                    </a>
+                    <a
+                      className="text-gray-300 hover:text-white transition"
+                      href="https://wa.me/971569169750"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      +971 56 916 9750
+                    </a>
+                  </div>
+                </div>
 
-    
-    {/* Social Links */}
-    <div>
-      <div className="flex items-center mb-1">
-        <FaLink className="mr-2 text-white text-lg" />
-        <span className="font-belleza text-lg">Catch us on us!</span>
-      </div>
-      <div className="ml-6 text-gray-300 font-roboto hover:text-white space-y-1">
-        <p>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-            Facebook
-          </a>
-        </p>
-        <p>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
-        </p>
-        {/* <p>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-            Linkedin
-          </a>
-        </p> */}
-      </div>
-    </div>
+                {/* Social Links */}
+                <div>
+                  <div className="flex items-center mb-1">
+                    <FaLink className="mr-2 text-white text-lg" />
+                    <span className="font-belleza text-lg">Catch us on us!</span>
+                  </div>
+                  <div className="ml-6 text-gray-300 font-roboto hover:text-white space-y-1">
+                    <p>
+                      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        Facebook
+                      </a>
+                    </p>
+                    <p>
+                      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        Instagram
+                      </a>
+                    </p>
+                  </div>
+                </div>
 
-    {/* Email */}
-    <div>
-      <div className="flex items-center mb-1">
-        <FaEnvelope className="mr-2 text-white text-lg" />
-        <span className="font-belleza text-lg">Email</span>
-      </div>
-      <div className="ml-6 font-roboto">
-        <a
-          href="mailto:finxawards@gmail.com"
-          className="text-gray-300 hover:text-white transition"
-        >
-          studiovisualfx@gmail.com
-        </a>
-      </div>
-    </div>
-
-
-  </div>
-</div>
-
+                {/* Email */}
+                <div>
+                  <div className="flex items-center mb-1">
+                    <FaEnvelope className="mr-2 text-white text-lg" />
+                    <span className="font-belleza text-lg">Email</span>
+                  </div>
+                  <div className="ml-6 font-roboto">
+                    <a
+                      href="mailto:studiovisualfx@gmail.com"
+                      className="text-gray-300 hover:text-white transition"
+                    >
+                      studiovisualfx@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Right Column (Form) */}
-          <div className="lg:w-2/3 outline outline-white rounded-[16px] p-6 ">
-            <h2 className="text-2xl sm:text-3xl font-belleza  text-white mb-8">
+          <div className="lg:w-2/3 outline outline-white rounded-[16px] p-6">
+            <h2 className="text-2xl sm:text-3xl font-belleza text-white mb-8">
               Send Message
             </h2>
 
-            <form ref={form} onSubmit={sendEmail} className="space-y-4  font-roboto">
+            <form ref={form} onSubmit={sendEmail} className="space-y-4 font-roboto">
               {/* Row 1 */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
                   name="firstName"
                   placeholder="First Name"
-                  className="flex-1 h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.firstName}
                   onChange={handleChange}
@@ -207,7 +191,7 @@ const Contact = () => {
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
-                  className="flex-1 h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.lastName}
                   onChange={handleChange}
@@ -220,7 +204,7 @@ const Contact = () => {
                   type="text"
                   name="mobile"
                   placeholder="Mobile"
-                  className="flex-1 h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.mobile}
                   onChange={handleChange}
@@ -229,7 +213,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="flex-1 h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="flex-1 h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.email}
                   onChange={handleChange}
@@ -237,40 +221,37 @@ const Contact = () => {
               </div>
 
               {/* Subject */}
-              {/* Row 3 */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
                   name="subject"
                   placeholder="Subject"
-                  className="w-full h-12 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="w-full h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.subject}
                   onChange={handleChange}
                 />
               </div>
 
-
               {/* Message */}
-              {/* Row 3 */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <textarea
                   name="message"
                   placeholder="Message"
-                  className="w-full h-32 p-3  text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
+                  className="w-full h-32 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
               </div>
+
               {/* Button */}
               <button
                 type="submit"
                 disabled={!formValid}
-                className={`w-full py-3 cursor-pointer font-roboto bg-white hover:bg-white text-black rounded-[8px] ${formValid
-                  ? "bg-white hover:bg-white"
-                  : "bg-gray-00 opacity-60 cursor-not-allowed"
-                  }`}
+                className={`w-full py-3 cursor-pointer font-roboto text-black rounded-[8px] ${
+                  formValid ? "bg-white hover:bg-white" : "bg-gray-00 opacity-60 cursor-not-allowed"
+                }`}
               >
                 Send Message
               </button>
@@ -281,7 +262,7 @@ const Contact = () => {
         {/* Modal */}
         {modal.show && (
           <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50">
-            <div className="bg-transparent backdrop-blur-xl rounded-[16px] outline-2 outline-white  p-6 w-80 sm:w-96 text-center">
+            <div className="bg-transparent backdrop-blur-xl rounded-[16px] outline-2 outline-white p-6 w-80 sm:w-96 text-center">
               <h2 className="text-xl text-white font-belleza mb-3">Thank You!</h2>
               <p className="text-white text-xs font-roboto mb-6">{modal.message}</p>
               <button

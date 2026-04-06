@@ -63,16 +63,17 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-12 px-4 sm:px-6 md:px-12 lg:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 items-start">
+    <section className="py-12 px-4 sm:px-6 md:px-12 lg:px-16 ">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
         
         {/* Left Column: Title and Description */}
         <div className="lg:col-span-1 lg:sticky ">
           <h2 className="text-3xl sm:text-4xl md:text-5xl text-white font-belleza  mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-300 font-roboto text-sm sm:text-sm md:text-sm leading-relaxed mb-12 sm:mb-16">
-            Find answers to common questions about our services, process, and offerings.
+          <p className="text-gray-300 font-roboto text-justify text-sm sm:text-sm md:text-sm leading-relaxed mb-12 sm:mb-16">
+           Find quick answers to the most common questions about our services,
+           process, and what to expect when working with Studio VisualFX.
           </p>
         </div>
 

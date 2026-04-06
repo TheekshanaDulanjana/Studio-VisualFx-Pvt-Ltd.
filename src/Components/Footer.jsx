@@ -55,8 +55,9 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
             <img src={Finax} alt="Logo" className="w-24 md:w-28 mb-4" />
             <p className="text-sm md:text-sm leading-relaxed font-roboto max-w-sm text-white/70">
-              Studio VisualFX brings your stories to life through cinematic visuals,
-              crafting memories that last forever.
+              Studio VisualFX (Pvt) Ltd. brings your stories
+               to life through cinematic creativity. Capturing moments,
+                emotions, and experiences with passion, precision, and artistry.
             </p>
           </div>
 
@@ -92,26 +93,54 @@ export default function Footer() {
 
           {/* Social Presence */}
           <div className="text-center md:text-left">
-            <h3 className="text-white font-belleza text-lg mb-4">Social Presence</h3>
-            <ul className="space-y-2 text-sm md:text-sm font-roboto">
-              <li className="flex items-center justify-center md:justify-start gap-3">
-                <FaWhatsapp className="text-white/70" />
-                <a href="https://wa.me/your-number" className="text-white/70 hover:text-white">Whatsapp</a>
-              </li>
-              <li className="flex items-center justify-center md:justify-start gap-3">
-                <FaFacebookF className="text-white/70" />
-                <a href="https://facebook.com" className="text-white/70 hover:text-white">Facebook</a>
-              </li>
-              <li className="flex items-center justify-center md:justify-start gap-3">
-                <FaInstagram className="text-white/70" />
-                <a href="https://instagram.com" className="text-white/70 hover:text-white">Instagram</a>
-              </li>
-              <li className="flex items-center justify-center md:justify-start gap-3">
-                <FaTiktok className="text-white/70" />
-                <a href="https://tiktok.com" className="text-white/70 hover:text-white">Tik Tok</a>
-              </li>
-            </ul>
-          </div>
+  <h3 className="text-white font-belleza text-lg mb-4">Social Presence</h3>
+  <ul className="space-y-2 text-sm md:text-sm font-roboto">
+    <li className="flex items-center justify-center md:justify-start gap-3">
+      <FaWhatsapp className="text-white/70" />
+      <a 
+        href="https://wa.me/94776996981" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-white/70 hover:text-white"
+      >
+        Whatsapp
+      </a>
+    </li>
+    <li className="flex items-center justify-center md:justify-start gap-3">
+      <FaFacebookF className="text-white/70" />
+      <a 
+        href="https://web.facebook.com/visualfxsl" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-white/70 hover:text-white"
+      >
+        Facebook
+      </a>
+    </li>
+    <li className="flex items-center justify-center md:justify-start gap-3">
+      <FaInstagram className="text-white/70" />
+      <a 
+        href="https://www.instagram.com/studiovisualfx/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-white/70 hover:text-white"
+      >
+        Instagram
+      </a>
+    </li>
+    <li className="flex items-center justify-center md:justify-start gap-3">
+      <FaTiktok className="text-white/70" />
+      <a 
+        href="https://www.tiktok.com/@studiovisualfx" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-white/70 hover:text-white"
+      >
+        Tik Tok
+      </a>
+    </li>
+  </ul>
+</div>
 
          
 
@@ -121,7 +150,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm md:text-sm font-roboto">
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <FaPhone className="text-white/70" />
-                <a href="tel:+971569169750" className="text-white/70 hover:text-white">+971 56 916 9750</a>
+                <a href="tel:+94776996981" className="text-white/70 hover:text-white">+94 77 699 6981</a>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <FaEnvelope className="text-white/70" />
@@ -135,14 +164,14 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 font-roboto">
-            <p className="text-center md:text-left text-[10px] md:text-[10px] uppercase tracking-[0.2em] text-white/50">
-              © {new Date().getFullYear()} Studio VisualFx (Pvt) Ltd. All Rights Reserved.
+            <p className="text-center md:text-left text-[10px] md:text-[10px] uppercase tracking-widest text-white/50">
+             Copyright © {new Date().getFullYear()} Studio VisualFx (Pvt) Ltd. All Rights Reserved.
             </p>
             <div className="flex gap-8">
-              <button onClick={() => { navigate("/privacy-policy"); window.scrollTo(0,0); }} className="text-white/50 hover:text-white text-[9px] md:text-[10px] uppercase tracking-[0.15em]">
+              <button onClick={() => { navigate("/privacy-policy"); window.scrollTo(0,0); }} className="text-white/50 hover:text-white text-[9px] md:text-[10px] uppercase tracking-wider ">
                 Privacy Policy
               </button>
-              <button onClick={() => { navigate("/terms-conditions"); window.scrollTo(0,0); }} className="text-white/50 hover:text-white text-[9px] md:text-[10px] uppercase tracking-[0.15em]">
+              <button onClick={() => { navigate("/terms-conditions"); window.scrollTo(0,0); }} className="text-white/50 hover:text-white text-[9px] md:text-[10px] uppercase tracking-wider">
                 Terms & Conditions
               </button>
             </div>

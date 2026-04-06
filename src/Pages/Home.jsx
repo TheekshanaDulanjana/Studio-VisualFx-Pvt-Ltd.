@@ -86,11 +86,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
           >
-            Every moment tells a story. We capture life’s emotions,
-            celebrations, and memories through our lens, turning
-            fleeting moments into timeless cinematic journeys.
-            <br />
-            Experience your story like never before.
+            Studio VisualFX is dedicated to producing high-end cinematic visuals that elevate every moment. With a passion for storytelling and attention to detail, we bring your vision to life in the most elegant and impactful way.
           </motion.p>
 
           {/* Buttons */}

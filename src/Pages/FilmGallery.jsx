@@ -105,13 +105,15 @@ const FilmGallery = () => {
             Our Films
           </motion.h1>
           <motion.p
-            className="text-sm md:text-base font-roboto text-white mt-2 max-w-3xl"
+            className="text-sm md:text-base font-roboto text-white mt-2 max-w-4xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            Every frame tells a story beyond words! Dive into timeless moments captured with passion and artistry!
-            Let your heart wander through memories frozen in light!
+            Explore our cinematic journey through weddings, music videos,
+             events, and commercial productions. Each film is crafted with 
+             creativity, passion, and precision to tell stories that inspire,
+              captivate, and leave a lasting impression.
           </motion.p>
 
           {/* Search Bar */}

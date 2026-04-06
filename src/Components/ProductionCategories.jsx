@@ -7,18 +7,18 @@ export default function ProductionCategories() {
   const otherCategories = [
     {
       img: event,
-      title: "Event Cinematography",
-      desc: "Document every celebration, big or small, with artistry, precision, and timeless cinematic storytelling.",
+      title: "Event Coverage",
+      desc: "We professionally capture every moment of your events from corporate functions to special celebrations, ensuring every highlight is preserved with clarity and creativity.",
     },
     {
       img: commercial,
       title: "Commercial Productions",
-      desc: "Elevate your brand with visually striking, memorable videos that engage audiences and tell your story.",
+      desc: "We create impactful visual content that elevates your brand. From advertisements to promotional videos, our productions are designed to attract, engage, and convert your audience.",
     },
     {
       img: music,
       title: "Music Videos",
-      desc: "Bring songs to life with emotional, cinematic visuals that resonate and leave lasting impressions.",
+      desc: "From concept to final cut, we bring your music to life with visually stunning storytelling. Our creative direction ensures your sound is matched with powerful, engaging visuals",
     },
   ];
 
@@ -27,7 +27,7 @@ export default function ProductionCategories() {
     {
       img: wedding,
       title: "Creative Wedding Films",
-      desc: "Capture your love story with cinematic moments, emotions, and memories that last a lifetime.",
+      desc: "We turn your special day into a cinematic love story. Every emotion, smile, and moment is beautifully captured and crafted into a timeless wedding film you’ll cherish forever.",
     },
     ...otherCategories,
   ];
@@ -42,15 +42,16 @@ export default function ProductionCategories() {
           {/* Left Content */}
           <div className="flex flex-col justify-center font-[Alata]">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6 font-belleza  text-center lg:text-left">
-              Turning Moments Into Cinematic Stories That Inspire
+              Bringing Your Moments to Life Through Cinematic Vision
             </h2>
 
             <p className="text-gray-300  font-roboto  max-w-2xl mx-auto lg:mx-0 text-sm text-center lg:text-justify sm:text-sm leading-relaxed">
-              Studio VisualFX transforms your most cherished moments into
-              stunning visual stories. From heartfelt weddings and lively
-              events to creative commercials and music videos, we craft
-              cinematic experiences that move, inspire, and leave lasting
-              memories.
+              At Studio VisualFX (Pvt) Ltd., we offer a range of
+               creative visual production services designed to capture,
+                create, and elevate your story. With a perfect blend of
+                 innovation, technology, and artistic vision, we deliver
+                  high-quality productions tailored to every unique moment
+                   and purpose.
             </p>
           </div>
 
@@ -63,8 +64,8 @@ export default function ProductionCategories() {
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
               <h3 className="text-2xl mb-2 font-belleza">Creative Wedding Films</h3>
-              <p className="text-[12px] text-gray-200 font-roboto  max-w-sm">
-                Capture your love story with cinematic moments, emotions, and memories that last a lifetime.
+              <p className="text-[12px] text-gray-200 font-roboto  max-w-lg">
+                We turn your special day into a cinematic love story. Every emotion, smile, and moment is beautifully captured and crafted into a timeless wedding film you’ll cherish forever.
               </p>
             </div>
           </div>

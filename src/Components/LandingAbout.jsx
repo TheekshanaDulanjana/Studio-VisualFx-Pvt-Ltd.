@@ -42,10 +42,11 @@ export default function LandingAbout() {
           {/* Right Content - Takes up 5/12 of the grid on desktop */}
           <div className="lg:col-span-5 flex flex-col justify-between items-start">
             <p className="text-gray-200 font-roboto text-sm sm:text-sm leading-relaxed mt-6 sm:mt-0 text-justify lg:text-justify">
-              At Studio VisualFX, we bring real moments to life through cinematic storytelling.
-              Our team blends artistry with modern filmmaking to transform your emotions,
-              celebrations, and memories into unforgettable visual experiences.
-              Every frame is crafted with intention, ensuring your story feels honest.
+              At Studio VisualFX (Pvt) Ltd., we are driven by a deep passion for storytelling through visuals. 
+              Every project we take on is a blend of creativity, technical expertise, and attention to 
+              detail ensuring each moment is captured with authenticity and purpose. From intimate 
+              celebrations to large-scale productions, we transform ideas into compelling visual 
+              experiences that leave a lasting impression.
             </p>
 
             <div className="mt-6 w-full flex justify-start">

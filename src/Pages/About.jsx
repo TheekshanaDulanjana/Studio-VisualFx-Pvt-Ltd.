@@ -10,19 +10,29 @@ export default function About() {
         <div className="w-full max-w-7xl mx-auto">
           <div className="max-w-7xl">
             
-            <h1 className="text-5xl text-white md:text-7xl  tracking-tight mb-6 font-belleza">
-              We transform real moments into timeless <br /> 
-               cinematic experiences! 
+            <h1 className="text-4xl text-white md:text-6xl leading-18 tracking-tight mb-6 font-belleza">
+              Crafting Timeless Visual Journeys <br />Through Passion, Vision, and Cinematic Creativity
             </h1>
 
             <p className="text-sm text-white text-justify leading-relaxed font-roboto">
-              At Studio VisualFX, we believe every moment has a story worth telling. Through 
-              cinematic storytelling, we capture genuine emotions and transform them into 
-              visually compelling narratives that last a lifetime. By blending creativity 
-              with modern filmmaking techniques, we go beyond traditional visuals to craft
-               each frame with precision and purpose. Our team focuses on light, motion, and
-                emotion to create meaningful visual experiences that allow you to relive your
-                 most valuable moments just as they were meant to be remembered.
+              With over 7 years of experience in visual storytelling, Studio VisualFX (Pvt) Ltd.
+               has transformed countless moments into cinematic memories that inspire, engage, 
+               and captivate. Having successfully completed 150+ projects, we pride ourselves 
+               on blending creativity, innovation, and technical precision to deliver productions
+                that are visually stunning and emotionally resonant.
+              <br /><br />
+              From intimate weddings to grand events, music videos, and commercial productions,
+               every project is approached with professional standards to ensure perfection at 
+               every step. Our dedicated team works closely with clients to understand their 
+               vision, translating ideas into compelling visual narratives that leave a lasting
+                impression. We bring your stories to life, capturing every moment with emotion,
+                 beauty, and authenticity.
+              <br /><br />
+              At Studio VisualFX, we create experiences that elevate every story into a timeless
+               visual journey. Whether it is a personal celebration, a brand campaign, or a
+                creative project, we bring your ideas to life with precision, artistry, and
+                 unmatched cinematic quality. Join us and let us create visual stories that
+                  inspire, move, and stay with you forever.
             </p>
 
           </div>
@@ -35,10 +45,10 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 
             {[
-              { label: 'Years of Experience', value: '5+' },
-              { label: 'Frames Crafted', value: '100+' },
-              { label: 'Cinematic Hours', value: '250+' },
-              { label: 'Creative Team', value: '3+' },
+              { label: 'Years of Experience', value: '7+' },
+              { label: 'Frames Crafted', value: '150+' },
+              { label: 'Cinematic Hours', value: '400+' },
+              { label: 'Creative Team', value: '4+' },
             ].map((stat, i) => (
               
               <div key={i} className="border-l-4 border-white pl-4">
