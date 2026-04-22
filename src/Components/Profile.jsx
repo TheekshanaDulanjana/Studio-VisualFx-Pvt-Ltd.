@@ -1,5 +1,5 @@
 import React from 'react';
-import weddingImg from '../assets/wedding.png';
+import sasanka from '../assets/sasanka.png';
 import { SiAdobepremierepro, SiDavinciresolve, SiAdobeaftereffects, SiAdobeaudition } from 'react-icons/si';
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 
@@ -92,8 +92,8 @@ const ServiceSection = () => {
               {/* Optional: Simple decorative border/effect behind image */}
               <div className="absolute -inset-1  otransition duration-1000"></div>
               <img 
-                src={weddingImg} 
-                alt="Professional Videography" 
+                src={sasanka} 
+                alt="Sasanka Dulanjana" 
                 className="relative w-full h-auto object-cover rounded-[16px] shadow-2xl transition duration-500"
               />
             </div>

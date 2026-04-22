@@ -11,17 +11,56 @@ const Contact = () => {
     lastName: "",
     mobile: "",
     email: "",
-    subject: "", 
+    subject: "",
     message: "",
   });
 
+  // Function to count words
+  const getWordCount = (str) => {
+    return str.trim() === "" ? 0 : str.trim().split(/\s+/).length;
+  };
+
   useEffect(() => {
-    const isValid = Object.values(formData).every((v) => v.trim() !== "");
+    // Basic Sri Lankan mobile check (starts with 0 or 94 or 7, max 10 digits total for simplicity)
+    const mobileRegex = /^(?:0|94|\+94)?(?:7(0|1|2|4|5|6|7|8)\d{7})$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    const wordCount = getWordCount(formData.message);
+    const isMobileValid = /^\d+$/.test(formData.mobile) && formData.mobile.length <= 10;
+
+    const isValid = 
+      formData.firstName.trim() !== "" &&
+      formData.lastName.trim() !== "" &&
+      emailRegex.test(formData.email) &&
+      isMobileValid &&
+      formData.subject.trim() !== "" &&
+      wordCount > 0 && wordCount <= 250;
+
     setFormValid(isValid);
   }, [formData]);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    // Mobile validation: Only allow numbers and limit to 10
+    if (name === "mobile") {
+      const onlyNums = value.replace(/[^0-9]/g, "");
+      if (onlyNums.length <= 10) {
+        setFormData({ ...formData, [name]: onlyNums });
+      }
+      return;
+    }
+
+    // Word count limit for message
+    if (name === "message") {
+      const words = getWordCount(value);
+      if (words <= 250 || value.length < formData.message.length) {
+        setFormData({ ...formData, [name]: value });
+      }
+      return;
+    }
+
+    setFormData({ ...formData, [name]: value });
   };
 
   const sendEmail = (e) => {
@@ -61,11 +100,9 @@ const Contact = () => {
   return (
     <div className="w-full px-6 md:px-6 lg:px-8 pb-16 py-12" style={{ color: "white" }}>
       <div className="max-w-7xl mx-auto">
-        {/* Flex container */}
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
           {/* Left Column */}
           <div className=" space-y-8">
-            {/* Title + Description */}
             <div>
               <h2 className="text-3xl sm:text-4xl font-belleza lg:text-5xl mb-4">
                 Get in Touch
@@ -78,91 +115,49 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* General Inquiries */}
             <div>
               <h3 className="text-xl md:text-3xl font-belleza mb-8">General Inquiries</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                {/* Phone */}
                 <div>
                   <div className="flex items-center mb-1">
                     <FaPhone className="mr-2 text-white text-lg" />
                     <span className="font-belleza text-lg">Dial</span>
                   </div>
                   <div className="flex flex-col ml-6 font-roboto space-y-1">
-                    <a
-                      className="text-gray-300 hover:text-white transition"
-                      href="tel:+971569169750"
-                    >
-                      +971 56 916 9750
-                    </a>
-                    <a
-                      className="text-gray-300 hover:text-white transition"
-                      href="tel:+971569169750"
-                    >
-                      +971 56 916 9750
-                    </a>
+                    <a className="text-gray-300 hover:text-white transition" href="tel:+971569169750">+971 56 916 9750</a>
+                    <a className="text-gray-300 hover:text-white transition" href="tel:+971569169750">+971 56 916 9750</a>
                   </div>
                 </div>
 
-                {/* WhatsApp */}
                 <div>
                   <div className="flex items-center mb-1">
                     <FaWhatsapp className="mr-2 text-white text-xl" />
                     <span className="font-belleza text-lg">Whatsapp</span>
                   </div>
                   <div className="flex flex-col ml-6 font-roboto space-y-1">
-                    <a
-                      className="text-gray-300 hover:text-white transition"
-                      href="https://wa.me/971569169750"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      +971 56 916 9750
-                    </a>
-                    <a
-                      className="text-gray-300 hover:text-white transition"
-                      href="https://wa.me/971569169750"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      +971 56 916 9750
-                    </a>
+                    <a className="text-gray-300 hover:text-white transition" href="https://wa.me/971569169750" target="_blank" rel="noopener noreferrer">+971 56 916 9750</a>
+                    <a className="text-gray-300 hover:text-white transition" href="https://wa.me/971569169750" target="_blank" rel="noopener noreferrer">+971 56 916 9750</a>
                   </div>
                 </div>
 
-                {/* Social Links */}
                 <div>
                   <div className="flex items-center mb-1">
                     <FaLink className="mr-2 text-white text-lg" />
                     <span className="font-belleza text-lg">Catch us on us!</span>
                   </div>
                   <div className="ml-6 text-gray-300 font-roboto hover:text-white space-y-1">
-                    <p>
-                      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                        Facebook
-                      </a>
-                    </p>
-                    <p>
-                      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                        Instagram
-                      </a>
-                    </p>
+                    <p><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+                    <p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
                   </div>
                 </div>
 
-                {/* Email */}
                 <div>
                   <div className="flex items-center mb-1">
                     <FaEnvelope className="mr-2 text-white text-lg" />
                     <span className="font-belleza text-lg">Email</span>
                   </div>
                   <div className="ml-6 font-roboto">
-                    <a
-                      href="mailto:studiovisualfx@gmail.com"
-                      className="text-gray-300 hover:text-white transition"
-                    >
-                      studiovisualfx@gmail.com
-                    </a>
+                    <a href="mailto:studiovisualfx@gmail.com" className="text-gray-300 hover:text-white transition">studiovisualfx@gmail.com</a>
                   </div>
                 </div>
               </div>
@@ -176,11 +171,11 @@ const Contact = () => {
             </h2>
 
             <form ref={form} onSubmit={sendEmail} className="space-y-4 font-roboto">
-              {/* Row 1 */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
                   name="firstName"
+                  maxLength={30}
                   placeholder="First Name"
                   className="flex-1 h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
@@ -190,6 +185,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="lastName"
+                  maxLength={30}
                   placeholder="Last Name"
                   className="flex-1 h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
@@ -198,12 +194,11 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Row 2 */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
                   name="mobile"
-                  placeholder="Mobile"
+                  placeholder="Mobile (e.g. 0771234567)"
                   className="flex-1 h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
                   value={formData.mobile}
@@ -220,11 +215,11 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Subject */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
                   name="subject"
+                  maxLength={100}
                   placeholder="Subject"
                   className="w-full h-12 p-3 text-xs font-roboto hover:outline-white rounded-[8px] border border-white/40 focus:outline-white transition"
                   required
@@ -233,8 +228,7 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Message */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-2">
                 <textarea
                   name="message"
                   placeholder="Message"
@@ -243,14 +237,16 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
+                <p className="text-[10px] text-gray-400 text-right">
+                  {getWordCount(formData.message)} / 250 words
+                </p>
               </div>
 
-              {/* Button */}
               <button
                 type="submit"
                 disabled={!formValid}
-                className={`w-full py-3 cursor-pointer font-roboto text-black rounded-[8px] ${
-                  formValid ? "bg-white hover:bg-white" : "bg-gray-00 opacity-60 cursor-not-allowed"
+                className={`w-full py-3 cursor-pointer font-roboto text-black rounded-[8px] transition ${
+                  formValid ? "bg-white hover:bg-gray-200" : "bg-gray-500 opacity-60 cursor-not-allowed"
                 }`}
               >
                 Send Message
